@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3944743846">
+    <data-source source="LOCAL" name="Rails Juniper: development" uuid="63782c35-d014-49b0-95dc-76e24e004253">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Juniper_development</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9bdf9fdfe9dfc2dfcfdfd9dfdedfc4dfdfdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Juniper: test" uuid="e1ec2dc8-876c-4e8a-993e-9a51f1b3f927">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Juniper_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9bdf9fdfe9dfc2dfcfdfd9dfdedfc4dfdfdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Juniper: production" uuid="cc6e7ab6-bfc5-4f05-bbca-f1e2bb7afc68">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Juniper_production</jdbc-url>
+      <user-name>Juniper</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe0dfffdfe4dfe3dffadfefdff8dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

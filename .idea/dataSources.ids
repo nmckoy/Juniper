@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails Juniper: development" uuid="63782c35-d014-49b0-95dc-76e24e004253">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Juniper: test" uuid="e1ec2dc8-876c-4e8a-993e-9a51f1b3f927">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Juniper: production" uuid="cc6e7ab6-bfc5-4f05-bbca-f1e2bb7afc68">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
