@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get 'maps/show'
+
+  get 'maps/search'
+  get 'map' => 'maps#show'
   get 'login/auth'
 
   resources :users
 
-  root 'login#auth'
+  match 'signup', to: 'users#new', via: 'get'
+  match 'login', to: 'login#auth', via: 'get'
+  root 'maps#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
