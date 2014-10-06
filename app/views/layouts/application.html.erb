@@ -5,10 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Slog", '../' , class: "navbar-brand"%>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home",    '../' %></li>
+          <li><%= link_to "Map",    'map' %></li>
+          <li><%= link_to "Slogs",    '#' %></li>
+          <li><%= link_to "Help",    '#' %></li>
+          <li><%= link_to "Contact",    '#' %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Sign in", 'login' %></li>
+          <li><%= link_to "Sign up", 'signup' %></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>
