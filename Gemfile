@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# gem 'sass', '~> 3.3'
+gem 'sass', '~> 3.2.0'
 gem 'bootstrap-sass', '~> 3.1'
 # gem 'bootflat-rails', '~> 0.1.9'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
