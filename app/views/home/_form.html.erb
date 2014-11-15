@@ -1,0 +1,12 @@
+<%= form_for(@home) do |f| %>
+
+<div class="field">
+  <%= f.label 'from: '%><br>
+  <%= f.text_field :from_destination  %>
+</div>
+<div class="field">
+  <%= f.label 'to:'%><br>
+  <%= f.text_field :to_destination %>
+</div>
+
+<% end %>

@@ -1,6 +1,6 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe MapsController, :type => :controller do
+RSpec.describe HomeController, :type => :controller do
 
   describe "GET show" do
     it "returns http success" do
