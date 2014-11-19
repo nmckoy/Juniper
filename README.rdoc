@@ -2,7 +2,7 @@
 
 readme for slog webApp
 will update when funcionalities get more concrete
-
+using bitbucket now for private
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
