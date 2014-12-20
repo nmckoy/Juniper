@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'callbacks/all'
-  get 'registrations/needemail' => 'registrations#needemail'
+  # match 'registrations' => 'registrations#moreinfo', via: :get
 
   devise_for :users,
              controllers: {
@@ -8,11 +8,15 @@ Rails.application.routes.draw do
                            :omniauth_callbacks => 'callbacks'
                           },
              path_names: {sign_in: 'signin', sign_up: 'signup'}
+  devise_scope :user do
+    get '/registrations/moreinfo' => 'registrations#moreinfo'
+  end
 
 
   get 'home/show'
   get 'home/search'
   get 'home' => 'home#show'
+  get 'profile' => 'users#show'
 
 
   resources :users

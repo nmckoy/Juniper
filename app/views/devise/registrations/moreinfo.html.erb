@@ -1,0 +1,22 @@
+<h3>Please fill in missing required fields</h3>
+<%= form_for(@user) do |form| %>
+    <% if @user.name.nil? %>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: 'form-control' %>
+        </div>
+    <% end %>
+
+    <% if @user.email.nil? %>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: 'form-control' %>
+        </div>
+    <% else %>
+        <p>email exists <%= @user.email %></p>
+    <% end %>
+        <div class="field" >
+          <%= form.submit 'Finish', class: 'btn btn-primary' %>
+        </div>
+<% end %>
+

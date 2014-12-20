@@ -10,16 +10,17 @@ class CallbacksController < Devise::OmniauthCallbacksController
 
       @user = User.from_omniauth(hash)
 
-      p 'errors: '
-      p @user.errors.messages
+      # p 'errors: '
+      # p @user.errors.messages
 
       if @user.persisted?
         sign_in_and_redirect @user
-
       else
-        flash[:alert] = @user.errors.messages.to_s
-        # session[:omniauth] = hash
-        redirect_to new_user_registration_url
+        flash[:alert] = @user.errors.full_messages
+        session[:omniauth] = hash.except('extra')
+        # sometimes email may be blank in omniauth hash
+        # letting user input email to save
+        redirect_to(controller: 'registrations', action: 'moreinfo')
       end
     end
 
