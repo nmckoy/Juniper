@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
   #           length: {minimum: 7}
 
   def self.from_omniauth(auth)
+    p 'NICK PROVIDER'
+    p auth.provider
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
