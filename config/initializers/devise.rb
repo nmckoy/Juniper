@@ -235,8 +235,16 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, "1581923908706737", "9006cc883aab6564b75edf5d76fe0c91", {}
   config.omniauth :twitter, "TKLOWimrlWuH6xK7JUJ72qSYG", "KG519g1Q9n9x2Q0K6MIRVVVtQnDh3LJuHaswVMi05wRQXc84Xs", {}
-  config.omniauth :google_oauth2, "658005777837-p491p7oo854a5au5nok5900f0a8ps5uq.apps.googleusercontent.com",
-                                  "K1rpyKRVFlbCgkLCOHLx4Ohn", {}
+  # two different keys and secrets for dev and prod
+  if Rails.env.production?
+    config.omniauth :google_oauth2, "658005777837-7r9tf8fcto0uftgagjfihto4ocmih6b6.apps.googleusercontent.com",
+                    "xhpUXGKRYBKeQM3c-r_GzGq8", {}
+  else
+    config.omniauth :google_oauth2, "658005777837-p491p7oo854a5au5nok5900f0a8ps5uq.apps.googleusercontent.com",
+                    "K1rpyKRVFlbCgkLCOHLx4Ohn", {}
+  end
+
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
