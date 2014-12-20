@@ -1,21 +1,20 @@
 class User < ActiveRecord::Base
-  has_one :login
-
-  # make all email address lowercase before saving
-  before_save do
-    self.email = email.downcase
-  end
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:facebook, :twitter, :google_oauth2]
 
   # yay validation!
   validates :name,
             presence: true
 
-  VALID_EMAIL_REGEX = /\A[\w\d\-.]+[@][\w\d\-.]+\.[a-z]{2,3}\z/i
-  validates :email,
-            presence: true,
-            uniqueness: {case_sensitive: false},
-            length: {maximum: 50},
-            format: {with: VALID_EMAIL_REGEX}
+  # VALID_EMAIL_REGEX = /\A[\w\d\-.]+[@][\w\d\-.]+\.[a-z]{2,3}\z/i
+  # validates :email,
+  #           presence: true,
+  #           uniqueness: {case_sensitive: false},
+  #           length: {maximum: 50},
+  #           format: {with: VALID_EMAIL_REGEX}
 
   # validates :password,
   #           presence: true,
@@ -24,14 +23,22 @@ class User < ActiveRecord::Base
   #           presence: true,
   #           length: {minimum: 7}
 
-  # method implies virtual attributes for
-  # password and password_confirmation
-  has_secure_password
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
 
-  # password is already 'cant be blank' with has_secure_password
-  validates :password,
-            length: {minimum: 6}
-  # in Rails 4, persisting attributes is done in the controller
-  # no need for attr_accessor for persisting attributes
+      # if 'facebook'.eql? user.provider
+      #   p 'provider is facebook'
+      #   user.email = auth.username << '@facebook.com'
+      #   p 'this is email for facebook: ' << user.email
+      # else
+        user.email = auth.info.email
+      # end
+
+      user.password = Devise.friendly_token[0,20]
+    end
+  end
 
 end

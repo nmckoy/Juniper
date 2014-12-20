@@ -1,15 +1,23 @@
 Rails.application.routes.draw do
-  get 'home/show'
+  get 'callbacks/all'
+  get 'registrations/needemail' => 'registrations#needemail'
 
+  devise_for :users,
+             controllers: {
+                           :registrations => 'registrations',
+                           :omniauth_callbacks => 'callbacks'
+                          },
+             path_names: {sign_in: 'signin', sign_up: 'signup'}
+
+
+  get 'home/show'
   get 'home/search'
   get 'home' => 'home#show'
-  get 'login/auth'
+
 
   resources :users
   resources :homes
 
-  match 'signup', to: 'users#new', via: 'get'
-  match 'login', to: 'login#auth', via: 'get'
   root 'home#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
