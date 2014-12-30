@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
       #   user.email = auth.username << '@facebook.com'
       #   p 'this is email for facebook: ' << user.email
       # else
-        user.email = auth.info.email
+      user.email = auth.info.email
       # end
 
       user.password = Devise.friendly_token[0,20]

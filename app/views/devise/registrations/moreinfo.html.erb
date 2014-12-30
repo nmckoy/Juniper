@@ -1,22 +1,44 @@
-<h3>Please fill in missing required fields</h3>
-<%= form_for(@user) do |form| %>
-    <% if @user.name.nil? %>
-        <div class="field">
-          <%= form.label :email %>
-          <%= form.text_field :email, class: 'form-control' %>
-        </div>
-    <% end %>
+<!--if user gets to this page there was a persistance error-->
 
-    <% if @user.email.nil? %>
-        <div class="field">
-          <%= form.label :email %>
-          <%= form.text_field :email, class: 'form-control' %>
+<h3>Please fill in missing required field(s)</h3>
+<%= form_for(@user) do |form| %>
+    <% if @user.errors.any? %>
+      <div class="container-fluid">
+        <div class="alert alert-danger">
+            <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+            </ul>
         </div>
-    <% else %>
-        <p>email exists <%= @user.email %></p>
+      </div>
+      <% @user.errors.messages.keys.each do |key| %>
+          <div class="field">
+            <%= form.label key %>
+            <%= form.text_field key, class: 'form-control' %>
+          </div>
+      <% end %>
     <% end %>
-        <div class="field" >
-          <%= form.submit 'Finish', class: 'btn btn-primary' %>
+<!--this is just for social login errors-->
+    <% if session[:errors] %>
+      <div class="container-fluid">
+        <div class="alert alert-danger">
+            <ul>
+                <% session[:errors_full_messages].each do |desc| %>
+                  <li><%= desc %></li>
+                <% end %>
+            </ul>
         </div>
+      </div>
+      <% session[:errors].keys.each do |key| %>
+          <div class="field">
+            <%= form.label key %>
+            <%= form.text_field key, class: 'form-control' %>
+          </div>
+      <% end %>
+    <% end %>
+    <div class="field" >
+      <%= form.submit 'Finish', class: 'btn btn-primary' %>
+    </div>
 <% end %>
 

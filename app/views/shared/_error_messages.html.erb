@@ -1,0 +1,23 @@
+<% if @user.errors.any? %>
+  <div class="container-fluid">
+    <div class="alert alert-danger">
+        <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+  </div>
+<% end %>
+<!--this is just for social login errors-->
+<% if session[:errors] %>
+  <div class="container-fluid">
+    <div class="alert alert-danger">
+        <ul>
+            <% session[:errors].full_messages.each do |err| %>
+              <li><%= err %></li>
+            <% end %>
+        </ul>
+    </div>
+  </div>
+<% end %>

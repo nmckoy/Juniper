@@ -7,34 +7,6 @@
 }
 
 ///***********************************
-//****** NavBar Customizations
-//************************************/
-//.bs-docs-nav {
-//  background-color: #F1F1F1;
-//}
-//
-//.bs-docs-nav .navbar-nav>li>a {
-//  font-weight: 500;
-//  color: #5D4434;
-//}
-///******* END *******************/
-//
-///*================================
-//    Header customizations
-//==================================*/
-//.bs-docs-header {
-//  background-color: #3a6639;
-//  color: #a8caa5;
-//}
-//.bs-docs-header h1 {
-//  color: #f0f0f0;
-//}
-//.bs-docs-header h1, .bs-docs-header p {
-//  margin-right: 380px;
-//  font-weight: 10;
-//}
-
-///***********************************
 //****** foot stuff
 //************************************/
 
@@ -108,3 +80,18 @@ aside {
 ///***********************************
 //****** for forms
 //************************************/
+
+// #error_explanation {
+//   color: red;
+//   ul {
+//     color: red;
+//     margin 0 0 30px 0;
+//   }
+// }
+
+// .field_with_errors {
+//   @extend .has-error;
+//   .form-control {
+//     color: $state-danger-text;
+//   }
+// }

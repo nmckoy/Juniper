@@ -6,6 +6,11 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
+    # remove provious social login errors
+    # before doing save validation
+    session.delete(:errors)
+    session.delete(:errors_full_messages)
+    
     hash = session[:omniauth]
     if hash
       @user = User.new(name: hash['info']['name'],
@@ -22,8 +27,8 @@ class RegistrationsController < Devise::RegistrationsController
           # nilling out email so condition will pass on moreinfo page
           # im pretty sure email is the only key i need to create
           # that may be empty in hash
-          @user.email = nil
-          flash[:alert] = @user.errors.full_messages
+          # @user.email = nil
+          # flash[:alert] = @user.errors.full_messages
           format.html {render :moreinfo}
 
         end
@@ -42,16 +47,18 @@ class RegistrationsController < Devise::RegistrationsController
     hash = session[:omniauth]
     if hash
       @user = User.new
-      p 'this is the omniauth session'
+      # p 'this is the omniauth session'
       # i need name and valid email to persist
       # checking these on moreinfo page to help save
-      @user.name = hash['info']['name']
-      @user.email = hash['info']['email']
-
-
+      # @user.name = hash['info']['name']
+      # @user.name = params['email']
+      # @user.email = hash['info']['email']
     else
       raise 'there was a social media API issue'
     end
   end
-
+  
+  private
+    
+  
 end

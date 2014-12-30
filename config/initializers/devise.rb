@@ -233,15 +233,21 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, "1581923908706737", "9006cc883aab6564b75edf5d76fe0c91", {}
   config.omniauth :twitter, "TKLOWimrlWuH6xK7JUJ72qSYG", "KG519g1Q9n9x2Q0K6MIRVVVtQnDh3LJuHaswVMi05wRQXc84Xs", {}
   # two different keys and secrets for dev and prod
   if Rails.env.production?
     config.omniauth :google_oauth2, "658005777837-7r9tf8fcto0uftgagjfihto4ocmih6b6.apps.googleusercontent.com",
                     "xhpUXGKRYBKeQM3c-r_GzGq8", {}
+    config.omniauth :facebook, "1581923908706737", "9006cc883aab6564b75edf5d76fe0c91", {}
   else
-    config.omniauth :google_oauth2, "658005777837-p491p7oo854a5au5nok5900f0a8ps5uq.apps.googleusercontent.com",
-                    "K1rpyKRVFlbCgkLCOHLx4Ohn", {}
+    # these are specific to cloud 9 dev environment
+    config.omniauth :google_oauth2, "658005777837-rrsk9l2gae4bg0en1qeo7umqd0olk44d.apps.googleusercontent.com",
+                    "IdRlc7tQqrE6b830mA-wynSz", {}
+    config.omniauth :facebook, "1591458964419898", "2d510e1adeaa8e82ee74331c72871293", {}
+    # and these are for my local
+    # config.omniauth :google_oauth2, "658005777837-p491p7oo854a5au5nok5900f0a8ps5uq.apps.googleusercontent.com",
+    #                 "K1rpyKRVFlbCgkLCOHLx4Ohn", {}
+    # config.omniauth :facebook, "1591460664419728", "99a59e8efc4933ad7f25671251af9321", {}
   end
 
 
