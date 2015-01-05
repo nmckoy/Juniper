@@ -4,10 +4,13 @@ Rails.application.routes.draw do
 
   devise_for :users,
              controllers: {
-                           :registrations => 'registrations',
-                           :omniauth_callbacks => 'callbacks'
+                            :registrations => 'registrations' ,
+                            :omniauth_callbacks => 'callbacks'
                           },
-             path_names: {sign_in: 'signin', sign_up: 'signup'}
+             path_names: { 
+                            sign_in: 'signin' , 
+                            sign_up: 'signup'
+                          }
   devise_scope :user do
     get '/registrations/moreinfo' => 'registrations#moreinfo'
   end
@@ -17,8 +20,9 @@ Rails.application.routes.draw do
   get 'home/search'
   get 'home' => 'home#show'
   get 'profile' => 'users#show'
+  
 
-
+  resources :slogs
   resources :users
   resources :homes
 

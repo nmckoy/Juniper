@@ -2,7 +2,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def new
     super
-    # raise "hello"
   end
 
   def create

@@ -1,15 +1,18 @@
 class User < ActiveRecord::Base
+  # relationship to slog posts. if user is destroyed then post is destroyed
+  # well. cascading relationship (deletions)
+  has_many :slogs, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable,
          :omniauthable, :omniauth_providers => [:facebook, :twitter, :google_oauth2]
 
   # yay validation!
   validates :name,
             presence: true
 
-  # VALID_EMAIL_REGEX = /\A[\w\d\-.]+[@][\w\d\-.]+\.[a-z]{2,3}\z/i
+  # VALID_EMAIL_REGEX = /\A([\w\d\-.][^@])+@{1}([\w\d\-.][^@])+\.[a-z]{2,3}z/i
   # validates :email,
   #           presence: true,
   #           uniqueness: {case_sensitive: false},
@@ -24,8 +27,8 @@ class User < ActiveRecord::Base
   #           length: {minimum: 7}
 
   def self.from_omniauth(auth)
-    p 'NICK PROVIDER'
-    p auth.provider
+    # p 'NICK PROVIDER'
+    # p auth.provider
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid

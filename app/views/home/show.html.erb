@@ -6,6 +6,9 @@
         <!--help the user with UX and flow navigation.</p>-->
   <!--</div>-->
 </div>
+<% if user_signed_in? %>
+  <p class="notice">Welcome, <%= current_user.name %>!</p>
+<% end %>
 <div class="center jumbotron">
   <h1>Welcome to Slog</h1>
 

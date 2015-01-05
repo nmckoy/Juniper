@@ -1,0 +1,3 @@
+for account verification, devise has :confirmable option
+mess with that later on
+

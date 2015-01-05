@@ -1,0 +1,10 @@
+
+<div id="slog-<%= slog.id %>">
+  <%= link_to gravatar_for(slog.user, {size: 50}), slog.user %>
+  <span class="user"><%= link_to slog.user.name, slog.user %></span>
+  <br>
+  <span class="description"><%= slog.description %></span>
+  <span class="timestamp">
+    <p>Posted <%= time_ago_in_words(slog.created_at) %> ago</p>
+  </span>
+</div>

@@ -4,17 +4,25 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
+        <%= gravatar_for @user, {size: 100} %>
         <%= @user.name %>
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.slogs.any? %>
+      <h3>Slogs <font size="2">(<%= @user.slogs.count %>)</font></h3>
+      <ol class="slogs">
+        <%= #render '/slogs/slogs' 
+            render @slogs %>
+      </ol>
+      <%= will_paginate @slogs %>
+    <% end %>
+  </div>
 </div>
 
-<!--<p>-->
-  <!--<strong>Email:</strong>-->
-  <!--<%= @user.email %>-->
-<!--</p>-->
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'list of users', users_path %>
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<br>
+<%= link_to 'Show All Users', users_path %> 
+<br>
+<%= link_to 'Post a Slog', new_slog_path %>

@@ -1,0 +1,23 @@
+<h2>Post a Slog</h2>
+<%= form_for(@slog) do |form| %>
+
+  <%= render 'shared/error_messages', object: form.object %>
+  
+  <div class="container">
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, class: 'form-control'%>
+    </div>
+    <div class="field">
+      <%= form.label :departure_date %>
+      <%= form.text_field :departure_date, class: 'form-control'%>
+    </div>
+    <div class="field">
+      <%= form.label :slog_type %>
+      <%= form.select :slog_type, options_for_select(@slog.slog_types), class: 'form-control'%>
+    </div>
+    <div class="field">
+      <%= form.submit "Slog!", class: 'btn btn-primary'%>
+    </div>
+  </div>
+<% end %>
