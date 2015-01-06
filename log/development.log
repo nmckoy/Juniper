@@ -15211,3 +15211,65 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 178ms (Views: 169.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 14:29:00 +0000
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (121.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (22.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered home/show.html.erb within layouts/application (981.2ms)
+Completed 401 Unauthorized in 1859ms
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 14:29:04 +0000
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (406.1ms)
+  Rendered home/show.html.erb within layouts/application (515.1ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 8417ms (Views: 8400.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:13 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:13 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:13 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:15 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
