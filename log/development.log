@@ -15273,3 +15273,565 @@ Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 14:
 
 
 Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 14:29:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (26.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+PG::InsufficientPrivilege: ERROR:  permission denied for relation schema_migrations
+: SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 14:42:16 +0000
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (5.3ms)
+  Rendered home/show.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 1309ms (Views: 1260.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 14:42:18 +0000
+
+
+Started GET "/users/signin" for 192.104.54.179 at 2015-01-06 15:00:24 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (17.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 224ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signin" for 192.104.54.179 at 2015-01-06 15:00:31 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo=", "user"=>{"email"=>"nmckoy10@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (70.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nmckoy10@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 283ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo=", "user"=>{"email"=>"nmckoy10@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 302ms (Views: 219.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:31 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:31 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:32 +0000
+
+
+Started POST "/users/signin" for 192.104.54.179 at 2015-01-06 15:00:38 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo=", "user"=>{"email"=>"nmckoy10@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nmckoy10@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 114ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo=", "user"=>{"email"=>"nmckoy10@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1364ms (Views: 1289.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:39 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:39 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:39 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:39 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:00:40 +0000
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 15:51:32 +0000
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (14.1ms)
+  Rendered home/show.html.erb within layouts/application (31.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1175ms (Views: 1126.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:51:34 +0000
+
+
+Started GET "/users/signin" for 192.104.54.179 at 2015-01-06 15:55:17 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (105.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 2420ms (Views: 1796.8ms | ActiveRecord: 412.4ms)
+
+
+Started GET "/users/signin" for 192.104.54.179 at 2015-01-06 15:55:21 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 212ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 192.104.54.179 at 2015-01-06 15:55:23 +0000
+
+
+Started GET "/users/auth/google_oauth2" for 192.104.54.179 at 2015-01-06 15:55:24 +0000
+
+
+Started GET "/users/auth/google_oauth2/callback?state=22c49569cf43dca4cd70b6fb8be2db2628c6ad15f11cc302&code=4/8kw4J3ISHr9GpTolDhEdMrmj-_9WKqOndpPScxM7kIM.0jrzeTt6eqUSXmXvfARQvtguFu5_lQI" for 192.104.54.179 at 2015-01-06 15:55:26 +0000
+Processing by CallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"22c49569cf43dca4cd70b6fb8be2db2628c6ad15f11cc302", "code"=>"4/8kw4J3ISHr9GpTolDhEdMrmj-_9WKqOndpPScxM7kIM.0jrzeTt6eqUSXmXvfARQvtguFu5_lQI"}
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '116320596850239321782'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mSQL (11.7ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 5[0m  [["current_sign_in_at", "2015-01-06 15:55:27.515261"], ["last_sign_in_at", "2015-01-05 21:23:14.296838"], ["sign_in_count", 8], ["updated_at", "2015-01-06 15:55:27.538498"]]
+  [1m[35m (24.5ms)[0m  COMMIT
+Redirected to https://juniper-nmckoy.c9.io/
+Completed 302 Found in 152ms (ActiveRecord: 40.3ms)
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 15:55:27 +0000
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/_form.html.erb (7.4ms)
+  Rendered home/show.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 290ms (Views: 274.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:28 +0000
+
+
+Started GET "/users/5" for 192.104.54.179 at 2015-01-06 15:55:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (26.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mSlog Exists (14.3ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 5]]
+  [1m[36m (4.9ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mSlog Load (3.9ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 5]]
+  Rendered slogs/_slog.html.erb (13.1ms)
+  Rendered users/show.html.erb within layouts/application (684.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1046ms (Views: 842.3ms | ActiveRecord: 78.9ms)
+
+
+Started GET "/users" for 192.104.54.179 at 2015-01-06 15:55:38 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1071ms (Views: 1064.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/4" for 192.104.54.179 at 2015-01-06 15:55:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mSlog Exists (0.6ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 365ms (Views: 342.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/slogs/new" for 192.104.54.179 at 2015-01-06 15:55:49 +0000
+Processing by SlogsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered slogs/new.html.erb within layouts/application (15.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 182ms (Views: 166.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/slogs" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+Processing by SlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo=", "slog"=>{"description"=>"", "departure_date"=>"", "slog_type"=>"R"}, "commit"=>"Slog!"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered slogs/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 235ms (Views: 197.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:52 +0000
+
+
+Started GET "/users/5" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mSlog Exists (0.4ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 5]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mSlog Load (0.4ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 5]]
+  Rendered slogs/_slog.html.erb (2.7ms)
+  Rendered users/show.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 193ms (Views: 186.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 15:55:59 +0000
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 15:56:02 +0000
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (2.2ms)
+  Rendered home/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 157ms (Views: 154.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 192.104.54.179 at 2015-01-06 17:51:07 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cyx5EIX8umYWDnhp+gvH4fMKEPAns0auLR8SxXiBLPo="}
+  [1m[36mUser Load (10.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://juniper-nmckoy.c9.io/
+Completed 302 Found in 1019ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/" for 192.104.54.179 at 2015-01-06 17:51:09 +0000
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (181.6ms)
+  Rendered home/show.html.erb within layouts/application (309.9ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 5453ms (Views: 5406.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/homes.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/slogs.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/users.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/application.css?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/homes.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/slogs.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/users.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/application.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 192.104.54.179 at 2015-01-06 17:51:15 +0000
+
+
+Started GET "/users/signin" for 192.104.54.179 at 2015-01-06 17:51:21 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (51.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1379ms (Views: 1344.2ms | ActiveRecord: 0.0ms)

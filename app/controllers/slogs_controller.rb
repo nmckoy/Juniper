@@ -1,5 +1,9 @@
 class SlogsController < ApplicationController
     
+    def index
+      @slogs = Slog.all
+    end
+    
     def new
       @slog = Slog.new
         

@@ -17,6 +17,9 @@
             render @slogs %>
       </ol>
       <%= will_paginate @slogs %>
+    <% else %>
+      <h2>You have no posted slogs</h2>
+      <p>click <%= link_to 'here', new_slog_path %> to post!</p>
     <% end %>
   </div>
 </div>
