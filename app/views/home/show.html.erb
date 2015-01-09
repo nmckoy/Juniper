@@ -7,7 +7,7 @@
   <!--</div>-->
 </div>
 <% if user_signed_in? %>
-  <p class="notice">Welcome, <%= current_user.name %>!</p>
+  <p class="notice">Welcome, <%= link_to current_user.name, current_user %>!</p>
 <% end %>
 <div class="center jumbotron">
   <h1>Welcome to Slog</h1>
@@ -17,5 +17,5 @@
   </h2>
 
   <!--<%= render 'form' %>-->
-  <%= link_to "Search", '#', class: "btn btn-primary" %>
+  <%= link_to "Search", slogs_path, class: "btn btn-primary" %>
 </div>

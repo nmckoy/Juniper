@@ -1,10 +1,20 @@
 
-<div id="slog-<%= slog.id %>">
-  <%= link_to gravatar_for(slog.user, {size: 50}), slog.user %>
-  <span class="user"><%= link_to slog.user.name, slog.user %></span>
-  <br>
-  <span class="description"><%= slog.description %></span>
-  <span class="timestamp">
-    <p>Posted <%= time_ago_in_words(slog.created_at) %> ago</p>
-  </span>
+<div class="slog" id="slog-<%= slog.id %>">
+  <div class="container-fluid">
+    <div class="col-md-8">
+      <%= link_to gravatar_for(slog.user, {size: 50}), slog.user %>
+      <span class="user"><%= link_to slog.user.name, slog.user %></span>
+      <br>
+      <span class="description"><%= slog.description %></span><br>
+      <span class="departure_date">Departure: <%= slog.departure_date %></span>
+      <span class="timestamp">
+        <p>Posted <%= time_ago_in_words(slog.created_at) %> ago</p>
+      </span>
+    </div>
+    <div class="col-md-4">
+      <% if current_user != slog.user %>
+        <p class="text-right"><%= link_to 'Start Convo', '#', class: 'btn btn-primary btn-sm' %></p>
+      <% end %>
+    </div>
+  </div>
 </div>

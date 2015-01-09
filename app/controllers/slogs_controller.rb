@@ -1,7 +1,7 @@
 class SlogsController < ApplicationController
     
     def index
-      @slogs = Slog.all
+      @slogs = Slog.paginate(page: params[:page])
     end
     
     def new

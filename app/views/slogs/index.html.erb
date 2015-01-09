@@ -1,0 +1,8 @@
+<div class="col-md-8">
+      <h3>Slogs</h3>
+      <ol class="slogs">
+        <%= #render '/slogs/slogs' 
+            render @slogs %>
+      </ol>
+      <%= will_paginate @slogs %>
+  </div>

@@ -6,9 +6,10 @@
 default: &default
   adapter: postgresql
   encoding: utf8
+  # encoding: SQL_ASCII
   pool: 5
-  # username: postgres
-  username: Juniper
+  username: postgres
+  # username: Juniper
   password: 
   host: localhost
 #  socket: /tmp/mysql.sock
