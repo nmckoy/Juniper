@@ -240,7 +240,7 @@ Devise.setup do |config|
   # two different keys and secrets for dev and prod
   if Rails.env.production?
     config.omniauth :google_oauth2, "658005777837-7r9tf8fcto0uftgagjfihto4ocmih6b6.apps.googleusercontent.com",
-                    "qCl2Pv-5k4H9nBicbWckHaCR", {}
+                    "OPBOP74eT-E0o9kiRYOY5Ygs", {}
     config.omniauth :facebook, "1581923908706737", "9006cc883aab6564b75edf5d76fe0c91", {}
   else
     # these are specific to cloud 9 dev environment
