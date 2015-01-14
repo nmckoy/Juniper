@@ -1,3 +1,19 @@
+
+##################################
+###  Sign up verifications  ######
+##################################
 for account verification, devise has :confirmable option
 mess with that later on
 
+##################################
+######      Search engine   ######
+##################################
+use :solr, :sphinx for search engine
+enabling search with mailboxer
+    https://github.com/frodefi/rails-messaging#enabling-search
+
+##################################
+######   my unix commands   ######
+##################################
+start postgresql:
+    sudo service postgresql start
