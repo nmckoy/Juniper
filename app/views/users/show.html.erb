@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-<% provide(:title, @user.name) %>
+<title><%= @user.name %></title>
+<%= render '/shared/user_tabs' %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">

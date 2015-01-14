@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get '/registrations/moreinfo' => 'registrations#moreinfo'
   end
 
+  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
   get 'home/show'
   get 'home/search'
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   resources :slogs
   resources :users
   resources :homes
+  resources :conversations
 
   root 'home#show'
 
