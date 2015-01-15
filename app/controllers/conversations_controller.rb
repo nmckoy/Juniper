@@ -2,7 +2,7 @@ class ConversationsController < ApplicationController
   before_action :set_user, only: [:index]
   
   def index
-    @conversations ||= @user.mailbox.inbox.all
+    @conversations ||= @user.mailbox.inbox.paginate(page: params[:page])
   end
   
   def create
