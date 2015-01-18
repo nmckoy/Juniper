@@ -8,10 +8,13 @@
       <li role="presentation"><a href="#">trashed</a></li>
     </ul>
   </div>
-  <div>
-    
+  <div class="col-md-10">
+    <% if @conversations.any? %>
+      <% @conversations.each do |convo| %>
+          <%= link_to convo.subject, convo %>
+      <% end %>
+    <% else %>
+      <h3 class="center">ops. you have no convos.</h3>
+    <% end %>
   </div>
 </div>
-<% @conversations.each do |convo| %>
-    
-<% end %>

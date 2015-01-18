@@ -19,8 +19,13 @@
   <!--  <%= f.label :password_confirmation, "Confirmation" %>-->
   <!--  <%= f.password_field :password_confirmation, class: 'form-control'%>-->
   <!--</div>-->
-  
+  <% if current_page?(edit_user_path) %>
     <div class="field">
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
     </div>
+  <% else %>
+    <div>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %> 
+    </div>
+  <% end %>
 <% end %>

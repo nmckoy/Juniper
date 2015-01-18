@@ -7,7 +7,7 @@ Rails.application.routes.draw do
                             :registrations => 'registrations' ,
                             :omniauth_callbacks => 'callbacks'
                           },
-             path_names: { 
+             path_names: {
                             sign_in: 'signin' , 
                             sign_up: 'signup'
                           }
