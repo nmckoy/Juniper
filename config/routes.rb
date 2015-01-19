@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     get '/registrations/moreinfo' => 'registrations#moreinfo'
   end
 
-  # get '/conversations/:id', to: 'conversations#index'
-  # get 'conversations/new', to: 'conversations#new'
+  get 'conversations/new', to: 'conversations#new'
+  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
   get 'home/show'
   get 'home/search'
