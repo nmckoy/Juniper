@@ -1,10 +1,8 @@
 <ul class="nav nav-tabs">
-  <!--if conversations object exists,
-      we are on messages page-->
     <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
       <%= link_to 'Profile', current_user %>
     </li>
-    <% if current_user == @user %>
+    <% if current_user %>
       <li role="presentation" <% if @conversations %> class="active" <% end %>>
         <%= link_to 'Messages', conversations_path %>
       </li>

@@ -1,11 +1,10 @@
 # overidden Conversations Controller from mailboxer
 class ConversationsController < ApplicationController
-  before_filter :get_user, only: [:index]
-  helper_method :mailbox, :conversation
+  helper_method :mailbox, :conversation, :get_curr_user
   
   def index
-    raise 'index action call'
-    @conversations ||= current_user.mailbox.inbox.paginate(page: params[:page])
+    # raise 'index action call'
+    @conversations ||= get_curr_user.mailbox.inbox.paginate(page: params[:page])
   end
   
   def create
@@ -31,9 +30,8 @@ class ConversationsController < ApplicationController
   
 # private methods #
   private
-    def get_user
-      
-      @user = User.find(params[:id])
+    def get_curr_user
+      @user = current_user
     end
     
     def mailbox
