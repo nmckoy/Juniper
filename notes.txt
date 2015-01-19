@@ -18,4 +18,34 @@ enabling search with mailboxer
 start postgresql:
     sudo service postgresql start
 
-    x
+Rails notes:
+
+Heroku vs. ninefold
+	for production deployment
+
+commands:
+	db:
+		-migrate database to test env
+			~rake environment RAILS_ENV=test db:migrate
+			~NO! run rake test:prepare to clone db for test instead of re-migrating 			  schema to test db
+		~setting up postgres http://blog.willj.net/2011/05/31/setting-up-postgresql-for-ruby-on-rails-development-on-os-x/
+		~for heroku database migration issues
+			~heroku run rake db:reset
+			~heroku run rake db:migrate
+
+		-use rails console for db test with rollbacks
+			~rails c --sandbox
+
+	rspec:
+	   -initialize with directory and spec_helper.rb
+	      ~rspec --init
+	   -gem install rspec-rails to recognize rails models and controllers for test
+
+core rails:
+	cant use attr_accessor for models or wont save to db
+
+git:
+	git push heroku master
+	removes all local files
+		git fetch --all
+		git reset --hard origin/master
