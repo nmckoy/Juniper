@@ -1,21 +1,32 @@
 # overidden Conversations Controller from mailboxer
 class ConversationsController < ApplicationController
-  helper_method :mailbox, :conversation, :get_curr_user
+  before_filter :get_user, only: [:index]
+  helper_method :mailbox, :conversation
   
   def index
     # raise 'index action call'
-    @conversations ||= get_curr_user.mailbox.inbox.paginate(page: params[:page])
+    @conversations ||= current_user.mailbox.inbox.paginate(page: params[:page])
   end
   
   def create
     
   end
-  
-  def new
-    raise 'new action called'
-  end
 
   def reply
+    current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
+    redirect_to conversation
+  end
+
+  # trashh stuff
+  def trashbin
+    @trash ||= current_user.mailbox.trash.all
+  end
+
+  def empty_trash
+    current_user.mailbox.trash.each do |conversation|
+      conversation.receipts_for(current_user).update_all(:deleted => true)
+    end
+    redirect_to :conversations
   end
 
   def trash
@@ -30,8 +41,8 @@ class ConversationsController < ApplicationController
   
 # private methods #
   private
-    def get_curr_user
-      @user = current_user
+    def get_user
+      @user = User.find(params[:id])
     end
     
     def mailbox

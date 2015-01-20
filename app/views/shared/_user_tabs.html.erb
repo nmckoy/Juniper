@@ -2,7 +2,7 @@
     <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
       <%= link_to 'Profile', current_user %>
     </li>
-    <% if current_user %>
+    <% if current_user == @user %>
       <li role="presentation" <% if @conversations %> class="active" <% end %>>
         <%= link_to 'Messages', conversations_path %>
       </li>

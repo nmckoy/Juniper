@@ -33126,3 +33126,1272 @@ ActionView::Template::Error (undefined local variable or method `conversations_p
   Rendered /usr/local/rvm/gems/ruby-2.1.4/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.4/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.4/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 08:43:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (87.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (351.0ms)
+  Rendered home/show.html.erb within layouts/application (368.3ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 1870ms (Views: 1580.7ms | ActiveRecord: 118.6ms)
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 08:43:47 -0500
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2015-01-19 08:50:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (62.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 372ms (Views: 294.5ms | ActiveRecord: 41.5ms)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 08:50:09 -0500
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 08:50:09 -0500
+
+
+Started GET "/users/auth/google_oauth2/callback?state=a3843d980fc7265ebdb4a6f6dcdaca666d28b67238ff84df&code=4/FhN40DPBI9CvJgF-CBCyYphBlscwK428fgxRVXv-1n4.cqCn358Hee8aJvIeHux6iLZVIO4ElgI" for 127.0.0.1 at 2015-01-19 08:50:12 -0500
+Processing by CallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"a3843d980fc7265ebdb4a6f6dcdaca666d28b67238ff84df", "code"=>"4/FhN40DPBI9CvJgF-CBCyYphBlscwK428fgxRVXv-1n4.cqCn358Hee8aJvIeHux6iLZVIO4ElgI"}
+  [1m[35mUser Load (504.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '116280307736418920576'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (122.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 7  [["current_sign_in_at", "2015-01-19 13:50:14.021954"], ["last_sign_in_at", "2015-01-18 17:37:47.453891"], ["sign_in_count", 4], ["updated_at", "2015-01-19 13:50:14.024569"]]
+  [1m[36m (33.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 811ms (ActiveRecord: 660.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (3.2ms)
+  Rendered home/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 309ms (Views: 306.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 08:50:14 -0500
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 08:50:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (4.4ms)
+  [1m[35mSlog Exists (42.4ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (10.5ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (2.3ms)
+  Rendered users/show.html.erb within layouts/application (200.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 512ms (Views: 376.3ms | ActiveRecord: 71.2ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 08:50:27 -0500
+Processing by SlogsController#index as HTML
+  [1m[36mSlog Load (0.6ms)[0m  [1mSELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (10.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered slogs/_slog.html.erb (30.6ms)
+  Rendered slogs/index.html.erb within layouts/application (34.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 252ms (Views: 237.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 08:50:43 -0500
+Processing by ConversationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (new action called):
+  app/controllers/conversations_controller.rb:15:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.3ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 08:50:43 -0500
+Processing by ConversationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (new action called):
+  app/controllers/conversations_controller.rb:15:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:05:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.6ms)
+  [1m[35mSlog Exists (0.4ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.4ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (40.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 286ms (Views: 279.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-01-19 09:05:56 -0500
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.4ms)
+  Rendered conversations/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    1: <ul class="nav nav-tabs">
+    2:     <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
+    3:       <%= link_to 'Profile', current_user %>
+    4:     </li>
+    5:     <% if current_user %>
+  app/views/shared/_user_tabs.html.erb:2:in `_app_views_shared__user_tabs_html_erb___4097929813083421750_70234902483440'
+  app/views/conversations/index.html.erb:1:in `_app_views_conversations_index_html_erb___2392939845261591011_70234917940720'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-01-19 09:05:56 -0500
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (2.5ms)
+  Rendered conversations/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    1: <ul class="nav nav-tabs">
+    2:     <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
+    3:       <%= link_to 'Profile', current_user %>
+    4:     </li>
+    5:     <% if current_user %>
+  app/views/shared/_user_tabs.html.erb:2:in `_app_views_shared__user_tabs_html_erb___4097929813083421750_70234919122680'
+  app/views/conversations/index.html.erb:1:in `_app_views_conversations_index_html_erb___2392939845261591011_70234919170680'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-01-19 09:22:28 -0500
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.7ms)
+  Rendered conversations/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+    1: <ul class="nav nav-tabs">
+    2:     <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
+    3:       <%= link_to 'Profile', current_user %>
+    4:     </li>
+    5:     <% if current_user %>
+  app/views/shared/_user_tabs.html.erb:2:in `_app_views_shared__user_tabs_html_erb___4097929813083421750_70234919122680'
+  app/views/conversations/index.html.erb:1:in `_app_views_conversations_index_html_erb___2392939845261591011_70234919170680'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 09:22:33 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (6.1ms)
+  Rendered home/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 234ms (Views: 204.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:22:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.4ms)
+  [1m[35mSlog Exists (0.5ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.3ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 267ms (Views: 252.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/conversations/7" for 127.0.0.1 at 2015-01-19 09:22:37 -0500
+Processing by ConversationsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.3ms)
+  [1m[35m (110.2ms)[0m  SELECT DISTINCT COUNT(DISTINCT "mailboxer_conversations"."id") FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 7 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'
+  Rendered conversations/index.html.erb within layouts/application (223.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 484ms (Views: 281.7ms | ActiveRecord: 199.1ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2015-01-19 09:22:39 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (3.2ms)
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (16.3ms)
+  Rendered users/edit.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 311ms (Views: 308.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:22:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (4.5ms)
+  [1m[35mSlog Exists (0.4ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.3ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 225ms (Views: 218.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 09:22:43 -0500
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/_form.html.erb (1.9ms)
+  Rendered home/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 219.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 09:22:44 -0500
+Processing by SlogsController#index as HTML
+  [1m[35mSlog Load (0.5ms)[0m  SELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered slogs/_slog.html.erb (12.1ms)
+  Rendered slogs/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 229ms (Views: 226.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 09:22:46 -0500
+Processing by ConversationsController#index as HTML
+  Parameters: {"id"=>"new"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (1.4ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT DISTINCT COUNT(DISTINCT "mailboxer_conversations"."id") FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 7 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'[0m
+  Rendered conversations/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 233ms (Views: 224.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 09:23:33 -0500
+Processing by SlogsController#index as HTML
+  [1m[35mSlog Load (0.5ms)[0m  SELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered slogs/_slog.html.erb (32.6ms)
+  Rendered slogs/index.html.erb within layouts/application (43.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 255ms (Views: 240.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 09:23:34 -0500
+Processing by ConversationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (new action called):
+  app/controllers/conversations_controller.rb:15:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.5ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 09:23:35 -0500
+Processing by ConversationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (new action called):
+  app/controllers/conversations_controller.rb:15:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (6.3ms)
+  Rendered home/show.html.erb within layouts/application (24.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 256ms (Views: 245.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 09:29:12 -0500
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:29:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (4.8ms)
+  [1m[35mSlog Exists (1.1ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.9ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (31.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 272ms (Views: 250.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/conversations/7" for 127.0.0.1 at 2015-01-19 09:29:18 -0500
+Processing by ConversationsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.8ms)
+  [1m[35m (1.2ms)[0m  SELECT DISTINCT COUNT(DISTINCT "mailboxer_conversations"."id") FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 7 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'
+  Rendered conversations/index.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 289ms (Views: 252.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2015-01-19 09:29:19 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (3.3ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 245ms (Views: 241.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:29:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.2ms)
+  [1m[35mSlog Exists (0.7ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.5ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 226.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 09:29:21 -0500
+Processing by SlogsController#index as HTML
+  [1m[36mSlog Load (0.7ms)[0m  [1mSELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered slogs/_slog.html.erb (13.0ms)
+  Rendered slogs/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 237ms (Views: 232.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2015-01-19 09:29:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.2ms)
+  [1m[35mSlog Exists (0.4ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 8]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 8]]
+  [1m[35mSlog Load (0.3ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 8]]
+  Rendered slogs/_slog.html.erb (3.0ms)
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 216.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 09:32:52 -0500
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/_form.html.erb (6.1ms)
+  Rendered home/show.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 277ms (Views: 263.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 09:32:54 -0500
+Processing by SlogsController#index as HTML
+  [1m[35mSlog Load (0.5ms)[0m  SELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered slogs/_slog.html.erb (13.5ms)
+  Rendered slogs/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 226.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2015-01-19 09:32:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (4.5ms)
+  [1m[36mSlog Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1[0m  [["user_id", 8]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1  [["user_id", 8]]
+  [1m[36mSlog Load (0.5ms)[0m  [1mSELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m  [["user_id", 8]]
+  Rendered slogs/_slog.html.erb (3.2ms)
+  Rendered users/show.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 248ms (Views: 239.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 09:33:01 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (3.1ms)
+  Rendered home/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 222ms (Views: 219.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:33:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.5ms)
+  [1m[35mSlog Exists (0.3ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.6ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 243ms (Views: 237.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/conversations/7" for 127.0.0.1 at 2015-01-19 09:33:04 -0500
+Processing by ConversationsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (1.7ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT DISTINCT COUNT(DISTINCT "mailboxer_conversations"."id") FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 7 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'[0m
+  Rendered conversations/index.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 285ms (Views: 246.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2015-01-19 09:33:06 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.3ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/_form.html.erb (4.8ms)
+  Rendered users/edit.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 240ms (Views: 236.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:33:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_user_tabs.html.erb (3.3ms)
+  [1m[36mSlog Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1[0m  [["user_id", 7]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1  [["user_id", 7]]
+  [1m[36mSlog Load (0.5ms)[0m  [1mSELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.5ms)
+  Rendered users/show.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 232ms (Views: 225.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/conversations/7" for 127.0.0.1 at 2015-01-19 09:33:09 -0500
+Processing by ConversationsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.4ms)
+  [1m[35m (1.0ms)[0m  SELECT DISTINCT COUNT(DISTINCT "mailboxer_conversations"."id") FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 7 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'
+  Rendered conversations/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 227.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2015-01-19 09:33:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.8ms)
+  [1m[35mSlog Exists (0.3ms)[0m  SELECT  1 AS one FROM "slogs"  WHERE "slogs"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "slogs"  WHERE "slogs"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mSlog Load (0.5ms)[0m  SELECT  "slogs".* FROM "slogs"  WHERE "slogs"."user_id" = $1  ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 7]]
+  Rendered slogs/_slog.html.erb (1.3ms)
+  Rendered users/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 254ms (Views: 246.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 09:33:11 -0500
+Processing by SlogsController#index as HTML
+  [1m[36mSlog Load (0.6ms)[0m  [1mSELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered slogs/_slog.html.erb (12.3ms)
+  Rendered slogs/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 249ms (Views: 245.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 09:33:12 -0500
+Processing by ConversationsController#new as HTML
+  Rendered conversations/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 371ms (Views: 369.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 12:52:18 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered home/show.html.erb within layouts/application (22.0ms)
+Completed 401 Unauthorized in 86ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 12:52:18 -0500
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (6.7ms)
+  Rendered home/show.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 300ms (Views: 298.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2015-01-19 12:52:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 278ms (Views: 275.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 12:52:21 -0500
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 12:52:21 -0500
+
+
+Started GET "/users/auth/google_oauth2/callback?state=18783e6a1c0c4cebf97fb615f00e6fd7a537c9b4e635f6fb&code=4/lU_AtZrPpy2Va_gOIOv4UfwdcEDuP4tX8LxYfw7twUM.wp11YHXdVqgTJvIeHux6iLZ_j6kGlgI" for 127.0.0.1 at 2015-01-19 12:52:22 -0500
+Processing by CallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"18783e6a1c0c4cebf97fb615f00e6fd7a537c9b4e635f6fb", "code"=>"4/lU_AtZrPpy2Va_gOIOv4UfwdcEDuP4tX8LxYfw7twUM.wp11YHXdVqgTJvIeHux6iLZ_j6kGlgI"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '116280307736418920576'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 7[0m  [["current_sign_in_at", "2015-01-19 17:52:23.665536"], ["last_sign_in_at", "2015-01-19 13:50:14.021954"], ["sign_in_count", 5], ["updated_at", "2015-01-19 17:52:23.666719"]]
+  [1m[35m (9.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 12:52:23 -0500
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/_form.html.erb (2.2ms)
+  Rendered home/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 214ms (Views: 212.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 12:52:24 -0500
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 12:52:25 -0500
+Processing by SlogsController#index as HTML
+  [1m[35mSlog Load (0.7ms)[0m  SELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered slogs/_slog.html.erb (15.0ms)
+  Rendered slogs/index.html.erb within layouts/application (46.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 328ms (Views: 317.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 12:52:26 -0500
+Processing by ConversationsController#new as HTML
+  Rendered conversations/new.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 240ms (Views: 237.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 13:48:59 -0500
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered home/show.html.erb within layouts/application (19.8ms)
+Completed 401 Unauthorized in 83ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 13:48:59 -0500
+Processing by HomeController#show as HTML
+  Rendered home/_form.html.erb (8.3ms)
+  Rendered home/show.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 292ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2015-01-19 13:49:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 273ms (Views: 271.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 13:49:04 -0500
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2015-01-19 13:49:04 -0500
+
+
+Started GET "/users/auth/google_oauth2/callback?state=71a2b2b2665415da3f5df74501274846ba701f5afa1d72e9&code=4/6CJtDJ8i8t2A6KYNldcBC_yyxDHncQj0pzoItsX47rw.IlvNCKiFDnoZJvIeHux6iLbtbBEHlgI" for 127.0.0.1 at 2015-01-19 13:49:06 -0500
+Processing by CallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"71a2b2b2665415da3f5df74501274846ba701f5afa1d72e9", "code"=>"4/6CJtDJ8i8t2A6KYNldcBC_yyxDHncQj0pzoItsX47rw.IlvNCKiFDnoZJvIeHux6iLbtbBEHlgI"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '116280307736418920576'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 7  [["current_sign_in_at", "2015-01-19 18:49:07.228123"], ["last_sign_in_at", "2015-01-19 17:52:23.665536"], ["sign_in_count", 6], ["updated_at", "2015-01-19 18:49:07.229192"]]
+  [1m[36m (34.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 35.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (2.2ms)
+  Rendered home/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 228ms (Views: 226.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 13:49:07 -0500
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 13:49:10 -0500
+Processing by SlogsController#index as HTML
+  [1m[36mSlog Load (0.6ms)[0m  [1mSELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered slogs/_slog.html.erb (15.6ms)
+  Rendered slogs/index.html.erb within layouts/application (44.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 293ms (Views: 282.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 13:49:12 -0500
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (1.8ms)
+  Rendered conversations/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @conversation do |convo| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= convo.label 'To' %>
+  app/views/conversations/_form.html.erb:1:in `_app_views_conversations__form_html_erb___872732427085085237_70234916602060'
+  app/views/conversations/new.html.erb:3:in `_app_views_conversations_new_html_erb___1154539943555741803_70234916625580'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 13:49:12 -0500
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (2.1ms)
+  Rendered conversations/new.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @conversation do |convo| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= convo.label 'To' %>
+  app/views/conversations/_form.html.erb:1:in `_app_views_conversations__form_html_erb___872732427085085237_70234915448240'
+  app/views/conversations/new.html.erb:3:in `_app_views_conversations_new_html_erb___1154539943555741803_70234915506760'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/_form.html.erb (8.1ms)
+  Rendered home/show.html.erb within layouts/application (49.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 311ms (Views: 292.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:25 -0500
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 14:03:26 -0500
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 14:03:27 -0500
+Processing by SlogsController#index as HTML
+  [1m[35mSlog Load (0.6ms)[0m  SELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered slogs/_slog.html.erb (14.9ms)
+  Rendered slogs/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 253ms (Views: 243.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 14:03:29 -0500
+Processing by ConversationsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `converstions' for #<User:0x007fc1ae4417f0>):
+  app/controllers/conversations_controller.rb:16:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 14:03:29 -0500
+Processing by ConversationsController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `converstions' for #<User:0x007fc1abdb87c8>):
+  app/controllers/conversations_controller.rb:16:in `new'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-19 14:04:10 -0500
+Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/_form.html.erb (7.9ms)
+  Rendered home/show.html.erb within layouts/application (50.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 342ms (Views: 323.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/conversations.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/slogs.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/callbacks.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/conversations.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/callbacks.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/slogs.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-19 14:04:11 -0500
+
+
+Started GET "/slogs" for 127.0.0.1 at 2015-01-19 14:04:12 -0500
+Processing by SlogsController#index as HTML
+  [1m[36mSlog Load (1.0ms)[0m  [1mSELECT  "slogs".* FROM "slogs"   ORDER BY "slogs"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered slogs/_slog.html.erb (15.4ms)
+  Rendered slogs/index.html.erb within layouts/application (46.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 305ms (Views: 295.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 14:04:13 -0500
+Processing by ConversationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered conversations/_form.html.erb (28.6ms)
+  Rendered conversations/new.html.erb within layouts/application (29.8ms)
+Completed 500 Internal Server Error in 294ms
+
+ActionView::Template::Error (undefined method `mailboxer_messages_path' for #<#<Class:0x007fc1ae4f3888>:0x007fc1ae4f2d98>):
+    1: <%= form_for @conversation do |convo| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= convo.label 'To' %>
+  app/views/conversations/_form.html.erb:1:in `_app_views_conversations__form_html_erb___872732427085085237_70234916602060'
+  app/views/conversations/new.html.erb:3:in `_app_views_conversations_new_html_erb___1154539943555741803_70234916625580'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2015-01-19 14:04:13 -0500
+Processing by ConversationsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 7  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered conversations/_form.html.erb (42.4ms)
+  Rendered conversations/new.html.erb within layouts/application (43.5ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (undefined method `mailboxer_messages_path' for #<#<Class:0x007fc1ae4f3888>:0x007fc1ae9e2650>):
+    1: <%= form_for @conversation do |convo| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= convo.label 'To' %>
+  app/views/conversations/_form.html.erb:1:in `_app_views_conversations__form_html_erb___872732427085085237_70234915448240'
+  app/views/conversations/new.html.erb:3:in `_app_views_conversations_new_html_erb___1154539943555741803_70234915506760'
+
+
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/nicholasmckoy/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
