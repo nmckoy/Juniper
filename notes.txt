@@ -1,3 +1,5 @@
+*****Stanford has released a Swift tutorial on iTunes*******
+
 
 ##################################
 ###  Sign up verifications  ######
