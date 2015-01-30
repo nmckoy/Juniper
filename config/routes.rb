@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'messages/new'
+
+  get 'messages/create'
+
   get 'callbacks/all'
   # match 'registrations' => 'registrations#moreinfo', via: :get
 
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
     get '/registrations/moreinfo' => 'registrations#moreinfo'
   end
 
-  get 'conversations/new', to: 'conversations#new'
+ # get 'conversations/new', to: 'conversations#new'
   get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
   get 'home/show'
@@ -27,7 +31,23 @@ Rails.application.routes.draw do
   resources :slogs
   resources :users
   resources :homes
-  resources :conversations
+  
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :recover
+    end
+    collection do
+      get :trashbin
+      post :empty_trash
+    end
+  end
+  resources :messages do
+    member do
+      post :create
+    end  
+  end  
 
   root 'home#show'
 

@@ -1,5 +1,5 @@
 *****Stanford has released a Swift tutorial on iTunes*******
-
+for payments use: https://www.braintreepayments.com/
 
 ##################################
 ###  Sign up verifications  ######
@@ -18,12 +18,11 @@ enabling search with mailboxer
 ######   my unix commands   ######
 ##################################
 start postgresql:
-    sudo service postgresql start
-
+	for c9:
+    	sudo service postgresql start
+	for local:
+		./startpg.sh
 Rails notes:
-
-Heroku vs. ninefold
-	for production deployment
 
 commands:
 	db:
@@ -32,8 +31,8 @@ commands:
 			~NO! run rake test:prepare to clone db for test instead of re-migrating 			  schema to test db
 		~setting up postgres http://blog.willj.net/2011/05/31/setting-up-postgresql-for-ruby-on-rails-development-on-os-x/
 		~for heroku database migration issues
-			~heroku run rake db:reset
-			~heroku run rake db:migrate
+			~heroku run rake db:reset --remote [remote name]
+			~heroku run rake db:migrate --remote [remote name]
 
 		-use rails console for db test with rollbacks
 			~rails c --sandbox
@@ -45,6 +44,7 @@ commands:
 
 core rails:
 	cant use attr_accessor for models or wont save to db
+	* try using :flash to pass hidden objects to the next control
 
 git:
 	git push heroku master

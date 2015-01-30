@@ -1,0 +1,15 @@
+<h1>Messages new</h1>
+<h3>send a message to <%= @user.name %></h3>
+<%= form_tag({controller: "messages", action: "create"}, method: :post) do %>
+  <div class="field">
+    <%= label_tag :subject, 'Subject' %>
+    <%= text_field_tag :subject %>
+  </div>
+  <div class="field">
+    <%= label_tag :body, 'Body' %>
+    <%= text_area_tag :body %>
+  </div>
+  <div class="field">
+    <%= submit_tag 'Send' %>
+  </div>
+<% end %>

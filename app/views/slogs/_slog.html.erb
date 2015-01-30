@@ -1,4 +1,6 @@
 
+<% session[:object] = slog.user %>
+
 <div class="slog" id="slog-<%= slog.id %>">
   <div class="container-fluid">
     <div class="col-md-10">
@@ -13,7 +15,7 @@
     </div>
     <div class="col-md-2">
       <% if current_user != slog.user %>
-        <p class="text-right"><%= link_to 'Start Convo', {controller: 'conversations', action: 'new'}, class: 'btn btn-primary btn-sm' %></p>
+        <p class="text-right"><%= link_to 'Start Convo', {controller: 'messages', action: 'new', user: slog.user}, class: 'btn btn-primary btn-sm' %></p>
       <% else %>
         <p class="text-right"><%= link_to 'Edit Slog', '#', class: 'btn btn-success btn-sm' %></p>
       <% end %>

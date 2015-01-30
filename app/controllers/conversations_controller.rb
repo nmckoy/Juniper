@@ -7,10 +7,6 @@ class ConversationsController < ApplicationController
     # raise 'index action call'
     @conversations ||= current_user.mailbox.inbox.paginate(page: params[:page])
   end
-  
-  def create
-    
-  end
 
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
