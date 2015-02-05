@@ -1,13 +1,15 @@
 <ul class="nav nav-tabs">
-    <li role="presentation" <% if current_page?(user_path) %> class="active" <% end %>>
+    <li role="presentation" <% if current_page?(user_path @user) %> class="active" <% end %>>
       <%= link_to 'Profile', current_user %>
     </li>
     <% if current_user == @user %>
-      <li role="presentation" <% if @conversations %> class="active" <% end %>>
-        <%= link_to 'Messages', conversations_path %>
+      <li role="presentation" <% if current_page?(conversations_path) %> class="active" <% end %>>
+        <%= link_to 'Messages', {controller: 'conversations', action: 'index', id: current_user.id} %>
       </li>
-      <li role="presentation" <% if current_page?(edit_user_path) %> class="active" <% end %>>
-        <%= link_to 'Settings', edit_user_path %>
+      <!-- I needed to pass along the user object that I made in
+           conversations#index -->
+      <li role="presentation" <% if current_page?(edit_user_path @user) %> class="active" <% end %>>
+        <%= link_to 'Settings', edit_user_path(@user) %>
       </li>
     <% end %>
 </ul>

@@ -21,6 +21,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    # settings page flag
+    @editpage = 'edit page'
   end
 
   # POST /users

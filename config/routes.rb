@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
  # get 'conversations/new', to: 'conversations#new'
-  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
+#  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
   get 'home/show'
   get 'home/search'
@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   
   resources :conversations do
     member do
+      get :sho
       post :reply
       post :trash
       post :recover
