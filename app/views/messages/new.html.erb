@@ -9,7 +9,8 @@
     <%= label_tag :body, 'Body' %>
     <%= text_area_tag :body %>
   </div>
+  <%= hidden_field_tag :user, @user.id %>
   <div class="field">
-    <%= submit_tag 'Send' %>
+    <%= submit_tag 'Send!' %>
   </div>
 <% end %>

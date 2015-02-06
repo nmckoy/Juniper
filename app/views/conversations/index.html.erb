@@ -10,9 +10,11 @@
   </div>
   <div class="col-md-10">
     <% if @conversations.any? %>
-      <% @conversations.each do |convo| %>
-          <%= link_to convo.subject, {controller: 'conversations', action: 'show', id: convo.id } %>
-      <% end %>
+      <ul>
+        <% @conversations.each do |convo| %>
+            <li><%= link_to convo.subject, {controller: 'conversations', action: 'show', id: convo.id } %></li>
+        <% end %>
+      </ul>
     <% else %>
       <h3 class="center">ops. you have no convos.</h3>
     <% end %>
