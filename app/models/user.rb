@@ -32,11 +32,11 @@ class User < ActiveRecord::Base
   #
   # configed in /initializers/mailboxer.rb
   def display_name
-    email
+    return email
   end
   
   def notifications_email(object)
-    email
+    return email
   end
 
   # omniauth save
