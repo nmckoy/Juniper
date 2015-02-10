@@ -32,9 +32,11 @@ Rails.application.routes.draw do
   resources :users
   resources :homes
   
+  #mailboxer
+  get 'conversations/sent', to: 'conversations#sentbox', as: 'sentbo'
   resources :conversations do
     member do
-      get :sho
+      
       post :reply
       post :trash
       post :recover

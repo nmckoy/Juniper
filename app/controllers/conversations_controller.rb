@@ -6,22 +6,32 @@ class ConversationsController < ApplicationController
   def index
     # raise 'index action call'
     @conversations ||= current_user.mailbox.inbox.paginate(page: params[:page])
+    #@sentbox ||= current_user.mailbox.sentbox.paginate(page: params[:page])
+    #@trashbin ||= current_user.mailbox.trash.paginate(page: params[:page])
+    
   end
+  
+  # def sentbox
+    
+  # end
   
   def show
     conversation
-    
+    @receipts = @conversation.receipts_for(current_user).paginate(page: params[:page])
   end
 
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
-    redirect_to conversation
+    # totally messed up routes somewhere
+    # redirect_to conversation
+    redirect_to action: 'show', id: @conversation.id
+    
   end
 
   # trashh stuff
-  def trashbin
-    @trash ||= current_user.mailbox.trash.all
-  end
+  # def trashbin
+  #   @trash ||= current_user.mailbox.trash.all
+  # end
 
   def empty_trash
     current_user.mailbox.trash.each do |conversation|

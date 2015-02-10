@@ -1,1 +1,39 @@
 <h1><%= @conversation.subject %></h1>
+
+<div class="container-fluid">
+    <ul>
+    <% @receipts.each do |receipt| %>
+        <li>
+        <div class="container-fluid col-md-6">
+            <% message = receipt.message %>
+            <p>
+              <% if current_user %>
+                <%= link_to 'you', current_user %>
+              <% else %>
+                <%= link_to message.sender.name, message.sender %>
+              <% end %>
+              
+              sent on <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %>
+            </p>
+            <p><%= message.body %></p>
+        </div>
+        </li>
+    <% end %>
+    <%= will_paginate @receipts%>
+    </ul>
+    
+
+</div>
+<div class="container">
+Reply:
+  <%= form_for :message, url: {controller: 'conversations', 
+                               action: 'reply', 
+                               id: @conversation.id}  do |f| %>
+  <%= f.text_area :body %>
+  <%= f.submit "Send Message", class: 'btn btn-primary' %>
+  <%= submit_tag 'Clear Reply Box', type: :reset, class: 'btn btn-danger' %>
+  <% end %>
+</div>
+<%= link_to 'Back to Messages', {controller: 'conversations', 
+                         action: 'index', 
+                         id: current_user.id} %>

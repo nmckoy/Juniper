@@ -3,20 +3,9 @@
 <h2>yo convos doe</h2>
 <div class="container-fluid">
   <div class="col-md-2">
-    <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" class="active"><a href="#">inbox</a></li>
-      <li role="presentation"><a href="#">trashed</a></li>
-    </ul>
+    <%= render 'mailbox_tabs' %> 
   </div>
   <div class="col-md-10">
-    <% if @conversations.any? %>
-      <ul>
-        <% @conversations.each do |convo| %>
-            <li><%= link_to convo.subject, {controller: 'conversations', action: 'show', id: convo.id } %></li>
-        <% end %>
-      </ul>
-    <% else %>
-      <h3 class="center">ops. you have no convos.</h3>
-    <% end %>
+    <%= render 'mail_lists' %>
   </div>
 </div>

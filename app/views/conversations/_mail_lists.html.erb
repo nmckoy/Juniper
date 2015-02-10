@@ -1,0 +1,13 @@
+<div id="inbox" class="container">
+  <% if @conversations.any? %>
+    <div class="container">
+      <ul>
+        <% @conversations.each do |convo| %>
+            <li><%= link_to convo.subject, {controller: 'conversations', action: 'show', id: convo.id } %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <h3 class="center">ops. you have no convos</h3>
+  <% end %>
+</div>
