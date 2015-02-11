@@ -1,6 +1,8 @@
 *****Stanford has released a Swift tutorial on iTunes*******
 for payments use: https://www.braintreepayments.com/
 
+for styling check out bootswatch.com
+
 ##################################
 ###  Sign up verifications  ######
 ##################################
