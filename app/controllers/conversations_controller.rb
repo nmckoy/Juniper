@@ -9,6 +9,10 @@ class ConversationsController < ApplicationController
     #@sentbox ||= current_user.mailbox.sentbox.paginate(page: params[:page])
     #@trashbin ||= current_user.mailbox.trash.paginate(page: params[:page])
     
+    respond_to do |format|
+      format.html { }
+    end  
+    
   end
   
   # def sentbox

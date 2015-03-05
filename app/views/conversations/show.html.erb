@@ -7,7 +7,7 @@
         <div class="container-fluid col-md-6">
             <% message = receipt.message %>
             <p>
-              <% if current_user %>
+              <% if current_user == message.sender %>
                 <%= link_to 'you', current_user %>
               <% else %>
                 <%= link_to message.sender.name, message.sender %>
@@ -30,8 +30,8 @@ Reply:
                                action: 'reply', 
                                id: @conversation.id}  do |f| %>
   <%= f.text_area :body %>
-  <%= f.submit "Send Message", class: 'btn btn-primary' %>
-  <%= submit_tag 'Clear Reply Box', type: :reset, class: 'btn btn-danger' %>
+  <%= f.submit "Send", class: 'btn btn-primary' %>
+  <%= submit_tag 'Clear', type: :reset, class: 'btn btn-danger' %>
   <% end %>
 </div>
 <%= link_to 'Back to Messages', {controller: 'conversations', 

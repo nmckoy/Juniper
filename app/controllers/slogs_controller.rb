@@ -2,6 +2,11 @@ class SlogsController < ApplicationController
     
     def index
       @slogs = Slog.paginate(page: params[:page])
+      
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: @slogs, status: :ok }
+      end
     end
     
     def new

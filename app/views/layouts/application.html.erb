@@ -3,8 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  
   <%= csrf_meta_tags %>
   <!--[if lt IE 9]>
   <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
@@ -12,7 +11,7 @@
   <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
   <!--[endif]-->
 </head>
-<body>
+<body ng-app="Rangular">
 <nav class="navbar navbar-inverse navbar-static-top" role="banner">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -44,7 +43,7 @@
     </div>
 </nav>
 <div class="container">
-    <p class="notice"><%= notice %></p>
+    <!--<p class="notice"><%= notice %></p>-->
     <p class="alert"><%= alert %></p>
     <%= yield %>
 </div>
@@ -52,5 +51,8 @@
     <%= render "layouts/footer" %>
     <%= debug(params) if Rails.env.development? %>
 </div>
+
+<!-- load javascripts last -->
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
