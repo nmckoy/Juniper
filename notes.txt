@@ -1,3 +1,6 @@
+****angular research*****
+angular session timeout with devise
+
 *****Stanford has released a Swift tutorial on iTunes*******
 for payments use: https://www.braintreepayments.com/
 

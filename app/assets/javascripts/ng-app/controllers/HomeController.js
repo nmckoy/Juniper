@@ -1,13 +1,12 @@
 (function(){
   // loading my app module
-  var app = angular.module("Rangular");
+  var home_ctrl = angular.module("home_ctrl", []);
   
   var HomeController = function ($scope, $log){
-      $scope.test = ['this', 'is', 'a', 'test'];
-      $scope.lol = "lol";
+      $scope.lol = "from ng controller";
       
       $log.info("homecontroller happened");
   };
   
-  app.controller("HomeController", HomeController);
+  home_ctrl.controller("HomeController", HomeController);
 }());

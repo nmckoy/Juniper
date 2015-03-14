@@ -22,13 +22,12 @@ Rails.application.routes.draw do
  # get 'conversations/new', to: 'conversations#new'
 #  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
-  get 'home/show'
-  get 'home/search'
-  get 'home' => 'home#show'
   get 'profile' => 'users#show'
   
-
+  get 'slogs/post' => 'angular#index'
+  #get 'slogs' => 'angular#index'
   resources :slogs
+  
   resources :users
   resources :homes
   
@@ -52,8 +51,11 @@ Rails.application.routes.draw do
     end  
   end  
 
-  root 'application#index'
-  get '*path' => 'application#index'
+  # routes for angular
+  root 'angular#index'
+  # for routes rails doesnt understand
+  
+  get '*path' => 'angular#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

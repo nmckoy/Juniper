@@ -1,0 +1,30 @@
+<title >Post a Slog</title>
+<h1>Post a Slog</h1>
+<!-- error messages -->
+<div class="alert alert-danger" ng-hide="!error">
+  <span ng-bind="error" />
+</div>
+<form class="edit_user" " ng-submit="saveOrUpdate()">
+  
+  <div class="field">
+    <label for="name">Description: </label>
+    <input id="name" class="form-control" 
+          type="text" ng-model="desc" required/>
+  </div>
+  <div class="field">
+    <label for="email">Departure: </label>
+    <input id="email" class="form-control" 
+          type="text" ng-model="departure_date" required/>
+  </div>
+  <div class="field">
+    <label for="slog_type">Slog Type: </label>
+    <select class="form-control" ng-model="slog_type" required>
+      <option ng-repeat="type in slog_types" 
+              value="{{type.value}}" ng-bind="type.name">
+      </option>
+    </select>
+  </div>
+  <div class="field">
+    <input type="submit" class="btn btn-primary" value="Slog!" />
+  </div>
+</form>

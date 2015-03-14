@@ -1,0 +1,22 @@
+<title ng-bind="user.name"></title>
+<h1>Editing User</h1>
+<!-- error messages -->
+<div class="alert alert-danger" ng-hide="!error">
+  <span ng-bind="error" />
+</div>
+<form class="edit_user" ng-submit="update()">
+  
+  <div class="field">
+    <label for="name">Name: </label>
+    <input id="name" class="form-control" type="text" ng-model="change_name" />
+  </div>
+  <div class="field">
+    <label for="email">Email: </label>
+    <input id="email" class="form-control" type="text" ng-model="change_email" />
+  </div>
+  <div class="field">
+    <input type="submit" class="btn btn-primary" value="Save Changes"
+          ng-disabled="!change_name && !change_email"/>
+  </div>
+</form>
+<a href="/profile/{{user.id}}" >Back to Profile</a>

@@ -1,0 +1,74 @@
+<title ng-bind="user.name"></title>
+<h2>Profile</h2>
+<!-- error messages -->
+<div  class="alert alert-danger" ng-show="error">
+  <span ng-bind="error" />
+</div>
+<div class="row">
+  <!-- User edit controller used here -->
+  <aside class="col-md-4" ng-controller="UserEditController">
+    <section class="user_info">
+      <img class="gravatar" src="{{user.gravatar}}" alt="{{user.name}}">
+      <h1 ng-show="!edit_name_flag" ng-click="edit_name()" 
+          ng-bind="user.name" class="pull-left"></h1><br>
+      <div ng-show="edit_name_flag">
+        <form>
+          <input type="text"
+                ng-model="user.name" focus="edit_name_flag" />
+        </form>
+      </div>
+    </section>
+    <small ng-show="!edit_email_flag" ng-bind="user.email" 
+            class="pull-left text-muted" ng-click="edit_email()"></small><br>
+    <div ng-show="edit_email_flag">
+      <form>
+        <input type="text"
+              ng-model="user.email" focus="edit_email_flag" />
+      </form>
+    </div>
+    <!--<small class="pull-left">-->
+    <!--  <a href="/profile/{{user.id}}/edit" >Edit Profile</a>-->
+    <!--</small><br>-->
+    <small class="pull-left" ng-show="user.currentuser">
+      <a href="/slogs/post" >Post a Slog</a>
+    </small>
+  </aside>
+  <div class="container-fluid col-md-8">
+    <div class="container-fluid col-md-8" ng-hide="user_slogs">
+      <h2>You have no posted slogs</h2>
+      <small>click <a href="/slogs/post">here</a> to post!</small>
+    </div>
+    <div class="container col-md-8" ng-show="user_slogs">
+      <h3>
+        Slogs
+        <small>(<span ng-bind="user_slogs.length"/>)</small>
+      </h3>
+      <ul class="list-group" ng-repeat="slog in user_slogs">
+        <li class="list-group-item">
+          <a href="">
+            <img src="{{user.gravatar}}" height="50" width="50" />
+          </a>
+          <button ng-show="user.currentuser" class="pull-right btn btn-success btn-xs">
+            Edit
+          </button>
+          <span>
+            <a href="/profile/{{user.id}}">
+              <span ng-bind="user.name" ></span>
+            </a>
+          </span>
+          <br>
+          <span><span ng-bind="slog.description"/></span>
+          <br>
+          <span>
+            Departure: <span ng-bind="slog.departure_date"/>
+          </span>
+          <span>
+            <small class="text-muted">
+              Posted <span ng-bind="slog.created_at | date:'medium'"/>
+            </small>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

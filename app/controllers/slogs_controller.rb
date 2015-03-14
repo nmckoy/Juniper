@@ -1,12 +1,12 @@
 class SlogsController < ApplicationController
     
     def index
-      @slogs = Slog.paginate(page: params[:page])
+      @slogs = Slog.all
       
-      respond_to do |format|
-        format.html { render :index }
-        format.json { render json: @slogs, status: :ok }
-      end
+      # respond_to do |format|
+      #   format.html { render :index }
+      #   format.json { render json: @slogs, status: :ok }
+      # end
     end
     
     def new
@@ -21,11 +21,18 @@ class SlogsController < ApplicationController
       respond_to do |format|
         if @slog.save
           format.html { redirect_to current_user, notice: 'Slogged!' }
+          format.json { render json: @slog, status: :ok, success: 'Slogged!'}
         else
           format.html { render :new }
+          format.json { render json: @slog.errors.full_messages, status: :unprocessable_entity }
         end
       end
       
+    end
+    
+    def user_slogs
+      @user = User.find(params[:id])
+      @slogs = @user.slogs
     end
     
     private

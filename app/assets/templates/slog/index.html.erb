@@ -1,0 +1,35 @@
+<title>Slogs</title>
+<div class="col-md-8">
+  <h3>All Slogs
+    <small><span ng-bind="filteredslogs.length"/> results</small>
+  </h3>
+  <input type="search" ng-model="searchText"></input>
+  <div class="container col-md-8" ng-click="show()">
+    <ul class="list-group" ng-repeat="slog in filteredslogs = (slogs | filter:searchText) ">
+      <li class="list-group-item">
+        <a href="/profile/{{slog.user.id}}">
+          <img src="{{slog.user.gravatar}}" height="50" width="50" />
+        </a>
+        <a href="" ng-show="slog.user.currentuser" class="pull-right btn btn-success btn-xs">
+          Edit
+        </a>
+        <span>
+          <a href="/profile/{{slog.user.id}}">
+            <span ng-bind="slog.user.name" ></span>
+          </a>
+        </span>
+        <br>
+        <span><span ng-bind="slog.description"/></span>
+        <br>
+        <span>
+          Departure: <span ng-bind="slog.departure_date"/>
+        </span>
+        <span>
+          <small class="text-muted">
+            Posted <span ng-bind="slog.created_at | date:'medium'"/>
+          </small>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
