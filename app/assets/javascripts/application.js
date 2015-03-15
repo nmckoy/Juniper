@@ -15,7 +15,9 @@
 //= require bootstrap.min
 //= require respond.min
 //= require html5shiv
-//= usebootstrap
+//= require usebootstrap
+//= require grayscale
+//= require jquery.easing.min
 //= require angular
 //= require angular-route
 //= require angular-resource
