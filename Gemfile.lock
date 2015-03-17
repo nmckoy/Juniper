@@ -71,6 +71,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     foreigner (1.7.2)
       activerecord (>= 3.0.0)
     hashie (3.3.2)
@@ -220,6 +222,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (~> 4.2.0)
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   mailboxer

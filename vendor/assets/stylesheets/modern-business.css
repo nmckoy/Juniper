@@ -4,16 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Global Styles */
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
 
 .img-portfolio {
     margin-bottom: 30px;
@@ -25,19 +15,28 @@ body {
 
 /* Home Page Carousel */
 
-header.carousel {
-    height: 50%;
+header {
+    height: 500px;
 }
 
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
-    height: 100%;
+    height: 500px;
 }
 
-header.carousel .fill {
+header.carousel #slide1-bg {
     width: 100%;
     height: 100%;
+    background-image:url("https://parkithere.files.wordpress.com/2013/02/happy-couple-driving-thumbs-up.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header.carousel #slide2-bg {
+    width: 100%;
+    height: 100%;
+    background-image:url("http://www.businesscarmanager.co.uk/wp-content/uploads/2014/07/shutterstock_114919174.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -65,12 +64,6 @@ header.carousel .fill {
 .period {
     display: block;
     font-style: italic;
-}
-
-/* Footer Styles */
-
-footer {
-    margin: 50px 0;
 }
 
 /* Responsive Styles */

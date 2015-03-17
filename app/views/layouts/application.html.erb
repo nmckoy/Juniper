@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  
+  <link rel="shortcut icon" href="" >
   <%= csrf_meta_tags %>
   <!--[if lt IE 9]>
   <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
@@ -15,7 +15,7 @@
 
 
   <!-- the Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation">
+  <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myCollapsable">
@@ -25,7 +25,7 @@
           </button>
           <strong><a href="/" id="logo" class="navbar-brand">Slog</a></strong>
         </div>
-        <div class="collapse navbar-collapse navbar-main-collapse" >
+        <div class="collapse navbar-collapse navbar-main-collapse" id="myCollapsable">
           <ul class="nav navbar-nav nav-size">
             <li><%= link_to "Slogs", '/slogs' %></li>
             <li><%= link_to "Blog", '/blog' %></li>
@@ -50,15 +50,15 @@
       </div>
   </nav>
   <!-- end Navvy -->
-  
-  <div class="container">
-      <!--<p class="notice"><%= notice %></p>-->
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-  </div>
-  <div class="container-fluid">
+  <!--<p class="notice"><%= notice %></p>-->
+  <!--<p class="alert"><%= alert %></p>-->
+  <!-- templates go here -->
+  <%= yield %>
+  <!-- end template -->
+  <div class="container col-md-12 ">
+      <!-- footer doe -->
       <%= render "layouts/footer" %>
-      <%= debug(params) if Rails.env.development? %>
+      <!--<%= debug(params) if Rails.env.development? %>-->
   </div>
 
   <!-- definitely load JSs last -->

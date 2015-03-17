@@ -1,34 +1,48 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
+<title>Signup for Awesome</title>
+<div class="container col-md-12 page-start">
+  <div class="container col-md-3 col-md-offset-3">
+    <h2>Sign up</h2>
+    
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+    
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, class: "form-control" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :password %>
+        <% if @validatable %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </div>
+    
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email%>
+  <div class="container social-logins col-md-3">
+    <%- if devise_mapping.omniauthable? %>
+      <%- resource_class.omniauth_providers.each do |provider| %>
+        <!-- because within each div there is ALWAYS 12 # of columns -->
+        <div class="container col-xs-2 col-sm-1 col-md-12">
+          <%= provider_image provider.to_s.titleize, omniauth_authorize_path(resource_name, provider) %><br />
+        </div>
+      <% end -%>
+    <% end -%>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>  

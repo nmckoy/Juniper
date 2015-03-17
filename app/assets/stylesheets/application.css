@@ -12,6 +12,9 @@
  *
  *= require_tree .
  *= require_self
- *= require usebootstrap.min
+  this is a font awesome gem
+ *= require font-awesome
  *= require modern-business
+ *= require usebootstrap.min
+ *= require bootstrap-social
  */

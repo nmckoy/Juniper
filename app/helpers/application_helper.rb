@@ -17,5 +17,22 @@ module ApplicationHelper
   def link_to_self(body, url_options = {}, html_options = {})
     link_to(body, url_options, html_options.merge(target: "_self"))
   end
+  
+  # image_tag helper for social media providers
+  def provider_image(provider, url_options = {}, html_options = {})
+    btn = "btn btn-block btn-social btn-sm "
+    if provider.include? "oogle"
+      #included font awesome icons for social logins
+      link_to(raw("<i class='fa fa-google-plus'></i> Sign in with Google"), url_options, 
+                  # styles for boostrap-social buttons
+                  html_options.merge(class: btn + "btn-google-plus"))
+    elsif provider.include? "Face"
+      link_to(raw("<i class='fa fa-facebook'></i> Sign in with Facebook"), url_options, 
+                  html_options.merge(class: btn + "btn-facebook"))
+    elsif provider.include? "Twit"
+      link_to(raw("<i class='fa fa-twitter'></i> Sign in with Twitter"), url_options, 
+                  html_options.merge(class: btn + "btn-twitter"))
+    end
+  end
 
 end
