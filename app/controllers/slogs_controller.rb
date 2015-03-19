@@ -14,6 +14,10 @@ class SlogsController < ApplicationController
         
     end
     
+    def show
+      @slog = Slog.find(params[:id])
+    end
+    
     def create
       @slog = current_user.slogs.build(slog_params)
       @slog.poster = current_user.name
@@ -28,11 +32,6 @@ class SlogsController < ApplicationController
         end
       end
       
-    end
-    
-    def user_slogs
-      @user = User.find(params[:id])
-      @slogs = @user.slogs
     end
     
     private

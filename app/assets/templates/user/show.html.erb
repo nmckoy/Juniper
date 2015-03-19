@@ -46,12 +46,12 @@
         </h3>
         <ul class="list-group" ng-repeat="slog in user_slogs">
           <li class="list-group-item">
-            <a href="">
+            <a href="/profile/{{user.id}}">
               <img src="{{user.gravatar}}" height="50" width="50" />
             </a>
-            <button ng-show="user.currentuser" class="pull-right btn btn-success btn-xs">
-              Edit
-            </button>
+            <a href="/slogs/{{slog.id}}" class="pull-right">
+              <i class="fa fa-external-link fa-2" />
+            </a>
             <span>
               <a href="/profile/{{user.id}}">
                 <span ng-bind="user.name" ></span>

@@ -1,5 +1,4 @@
 (function() {
-  var slog_index_ctrl = angular.module("slog_index_ctrl", ["_SRVC"]);
   
   var SlogIndexController = function($scope, $log, $location,
                                       Slog, User){
@@ -18,5 +17,6 @@
     });
   };
   
-  slog_index_ctrl.controller("SlogIndexController", SlogIndexController);
+  angular.module("_SLG")
+    .controller("SlogIndexController", SlogIndexController);
 }());

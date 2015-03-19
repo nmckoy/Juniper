@@ -1,10 +1,9 @@
 (function() {
-  var user_edit_ctrl = angular.module("user_edit_ctrl", ["user_srvc"]);
   
   var UserEditController = function($scope, User, $log, $routeParams,
                                     $location) {
     $scope.error = null;
-    $log.info("in usereditctrl");
+    //$log.info("in usereditctrl");
     
     $scope.edit_name_flag = null;
     $scope.edit_email_flag = null;
@@ -65,6 +64,8 @@
     
   };
   
-  user_edit_ctrl.controller("UserEditController", UserEditController);
+  angular.module("_USR")
+    .controller("UserEditController", UserEditController);
+    
   
 }());

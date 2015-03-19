@@ -1,5 +1,5 @@
 (function(){
-  var user_srvc = angular.module("user_srvc", ["ngResource"]);
+  var user_model_srvc = angular.module("user_model_srvc", ["ngResource"]);
   
   // optional parameter to pass are
   // currentuser: true - to get current logged in user
@@ -10,5 +10,5 @@
                     );
   };
   
-  user_srvc.factory("User", User);
+  user_model_srvc.factory("User", User);
 }());

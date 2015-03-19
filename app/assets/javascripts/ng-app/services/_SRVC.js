@@ -1,6 +1,6 @@
 (function(){
   angular.module("_SRVC",
-  //list of all services
-  ["user_srvc", "slog_srvc"]);
+  //list of all service-sub-modules
+  ["slog_model_srvc", "user_model_srvc"]);
   
 }());

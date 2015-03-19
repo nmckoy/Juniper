@@ -30,6 +30,10 @@
         templateUrl: "slog/new.html",
         controller: "SlogNewController"
       })
+      .when("/slogs/:id", {
+        templateUrl: "slog/show.html",
+        controller: "SlogShowController"
+      })
       .when("/404", {
         templateUrl: "static/404.html"
       })

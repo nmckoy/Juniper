@@ -1,6 +1,7 @@
 ****angular research*****
 angular session timeout with devise
 	yo dude. just check if currentuser. duh
+	orrrr check if promise error status is 401 unauthor
 
 *****Stanford has released a Swift tutorial on iTunes*******
 for payments use: https://www.braintreepayments.com/

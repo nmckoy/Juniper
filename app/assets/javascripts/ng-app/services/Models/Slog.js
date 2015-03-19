@@ -1,5 +1,5 @@
 (function (){
-  var slog_srvc = angular.module("slog_srvc", ["ngResource"]);
+  var slog_model_srvc = angular.module("slog_model_srvc", ["ngResource"]);
   
   // optional parameters to pass are
   // * must pass both of these to get user slogs *
@@ -12,8 +12,8 @@
                           {update: {method: "PUT"} }
                        );
     
-    // EDIT: 03/11/2015 - passing parameters to rails instead
-    // to handle return of slogs
+    // EDIT: 03/11/2015 - passing query parameters to rails
+    // instead to handle return of slogs
     //
     // specific method to get slogs by userid
     // returns and object of array of objects lol
@@ -34,6 +34,6 @@
     // };
   };
   
-  slog_srvc.factory("Slog", Slog);
+  slog_model_srvc.factory("Slog", Slog);
   
 }());

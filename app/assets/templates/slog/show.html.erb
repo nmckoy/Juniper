@@ -1,0 +1,21 @@
+<div class="container page-start">
+  <div class="container col-md-6 col-md-offset-4">
+    <div class="media">
+      <div class="media-body" ng-controller="SlogEditController">
+        <h3 class="media-heading">Slog 
+          <small class="text-muted">
+            Posted <span ng-bind="slog.created_at | date:'medium'"/>
+          </small>
+        </h3>
+        <p ng-click="edit_desc()" ng-show="!edit_desc_flag"
+                  ng-bind="slog.description"></p>
+        <div ng-show="edit_desc_flag">
+          <form>
+            <textarea ng-model="slog.description"></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

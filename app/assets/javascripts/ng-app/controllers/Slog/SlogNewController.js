@@ -1,5 +1,4 @@
 (function(){
-  var slog_new_ctrl = angular.module("slog_new_ctrl", ["_SRVC"]);
   
   var SlogNewController = function($scope, Slog, $location, 
                                     $log, User) {
@@ -46,5 +45,6 @@
     
   };
   
-  slog_new_ctrl.controller("SlogNewController", SlogNewController);
+  angular.module("_SLG")
+    .controller("SlogNewController", SlogNewController);
 }());

@@ -1,8 +1,7 @@
 (function() {
-  var user_show_ctrl = angular.module("user_show_ctrl", ["_SRVC"]);
   
-  var UserShowController = function($scope, User, Slog, $log, $routeParams,
-                                    $location) {
+  var UserShowController = function($scope, User, Slog, $log, 
+                                  $routeParams, $location) {
                                       
     //$log.info("in profilectrl");
     
@@ -30,10 +29,9 @@
       // error handling
       $scope.user_slogs = null;
     });
-    
-    
   };
   
-  user_show_ctrl.controller("UserShowController", UserShowController);
+  angular.module("_USR")
+    .controller("UserShowController", UserShowController);
   
 }());

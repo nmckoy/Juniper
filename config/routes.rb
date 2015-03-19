@@ -22,14 +22,12 @@ Rails.application.routes.draw do
  # get 'conversations/new', to: 'conversations#new'
 #  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
 
-  get 'profile' => 'users#show'
   
-  get 'slogs/post' => 'angular#index'
   #get 'slogs' => 'angular#index'
+  #get 'slogs/:id' => 'angular#index'
   resources :slogs
   
   resources :users
-  resources :homes
   
   #mailboxer
   get 'conversations/sent', to: 'conversations#sentbox', as: 'sentbo'
