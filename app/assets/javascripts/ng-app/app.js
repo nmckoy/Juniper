@@ -1,8 +1,7 @@
 (function(){
   // creating the new app module
   var app = angular.module("Rangular", 
-  ["ngRoute", "templates", "_CTRL", "_SRVC", "_DIRC",
-    "ng_rails_csrf"]);
+  ["ngRoute", "templates", "_CTRL", "_SRVC", "_DIRC"]);
 
   var routes = function($routeProvider, $locationProvider) {
     $routeProvider

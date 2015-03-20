@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-gem 'sprockets', '2.11.0'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # font-awesome

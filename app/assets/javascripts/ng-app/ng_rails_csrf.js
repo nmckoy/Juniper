@@ -1,6 +1,4 @@
 (function(){
-
-  var ng_rails_csrf = angular.module('ng_rails_csrf', []);
   
   var csrf = function($httpProvider) {
         var authToken;
@@ -8,6 +6,6 @@
         $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = authToken;
   };
   
-  ng_rails_csrf.config(csrf);
+  angular.module('Rangular').config(csrf);
   
 }());
