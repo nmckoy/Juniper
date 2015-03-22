@@ -25,7 +25,7 @@
 //= require_tree ../templates
 
 // have to tell rails to load sub-modules bae
-//= require ../javascripts/ng-app/controllers/User/_USR
+//= require ../javascripts/ng-app/modules/User/controllers/_USR
 //= require ../javascripts/ng-app/controllers/Slog/_SLG
 //= require_tree .
 
