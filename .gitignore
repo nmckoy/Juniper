@@ -12,7 +12,8 @@
 
 # please ignore c9
 /.c9/
-
+# node_modules ignore
+/node_modules/
 ## Specific to RubyMotion:
 .dat*
 .repl_history
