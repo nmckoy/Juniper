@@ -5,8 +5,7 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'Rangular';
 
-	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates',
-																						'_SRVC', '_CTRL', '_DIRC'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
