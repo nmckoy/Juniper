@@ -1,6 +1,6 @@
 angular.module('_USER')
   .controller('UserEditController', ['$scope', '$log', '$routeParams', '$location', 'User',
-    function UserEditController($scope, $log, $routeParams, $location, USer){
+    function UserEditController($scope, $log, $routeParams, $location, User){
       $scope.error = null;
       //$log.info('in usereditctrl');
       
@@ -21,6 +21,7 @@ angular.module('_USER')
         }
       });
       $scope.$watch('edit_email_flag', function() {
+        $log.info($scope.edit_email_flag);
         if ($scope.edit_email_flag === false){
           update('email');
         }
