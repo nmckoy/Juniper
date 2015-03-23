@@ -12,8 +12,11 @@
 
 # please ignore c9
 /.c9/
-# node_modules ignore
-/node_modules/
+
+# ignoring logs
+/log/
+
+>>>>>>> 8e2e09eca807d07a557707c7623040a1293c0797
 ## Specific to RubyMotion:
 .dat*
 .repl_history
