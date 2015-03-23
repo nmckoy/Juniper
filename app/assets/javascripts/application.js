@@ -27,8 +27,8 @@
 // have to tell rails to load sub-modules bae
 //= require ../javascripts/ng-app/config
 //= require ../javascripts/ng-app/init
-//= require ../javascripts/ng-app/modules/User/_USR
-//= require ../javascripts/ng-app/modules/Slog/_SLG
+//= require ../javascripts/ng-app/modules/User/_USER
+//= require ../javascripts/ng-app/modules/Slog/_SLOG
 //= require_tree .
 
 
