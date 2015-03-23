@@ -39,7 +39,6 @@ group :development do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'annotate'
-  gem 'rails-assets-angular-mocks'
 end
 
 
