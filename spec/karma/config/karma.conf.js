@@ -6,11 +6,11 @@
 var
   _ = require('lodash'),
 	appAssets = [
-	  '/app/assets/javascripts/ng-app/*.js',
-	  '/app/assets/javascripts/ng-app/modules/**/*js',
-	  '/app/assets/javascripts/ng-app/modules/**/**/*js'],
-	tests = [
-	  '/app/assets/javascripts/ng-app/modules/**/tests/*js'
+	  JS_APPLICATION_SPEC,
+	  '../app/assets/javascripts/ng-app/modules/**/*js',
+	  '../app/assets/javascripts/ng-app/modules/**/**/*js'],
+	js_tests = [
+	  '../app/assets/javascripts/ng-app/modules/**/tests/**/*js'
 	  ];
 
 // Karma configuration
@@ -20,7 +20,7 @@ module.exports = function(karmaConfig) {
 		frameworks: ['mocha'],
 
 		// List of files / patterns to load in the browser
-		files: _.union(appAssets, tests, defaultAssets.client.js),
+		files: _.union(appAssets, js_tests),
 
 		// Test results reporter to use
 		// Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
