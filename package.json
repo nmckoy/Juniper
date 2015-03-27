@@ -6,8 +6,21 @@
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "karma": "^0.12.31",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-ng-scenario": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "lodash": "^3.5.0",
+    "phantomjs": "^1.9.16"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC"
