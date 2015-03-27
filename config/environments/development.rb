@@ -35,5 +35,8 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   
-  config.assets.paths << Rails.root.join('spec/karma')
+  # for karma: precompile and generate .js assets to be used for spec tests
+  # precompile never worked
+  #config.assets.prefix = "../spec/client/generated/assets"
+  
 end
