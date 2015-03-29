@@ -11,7 +11,7 @@ var
 	  '../app/assets/javascripts/ng-app/modules/**/*js',
 	  '../app/assets/javascripts/ng-app/modules/**/**/*js'],
 	js_tests = [
-	  '../spec/client/tests/**/*js'
+	  '../spec/client/tests/**/**/*js'
 	  ];
 
 // Karma configuration

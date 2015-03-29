@@ -2,8 +2,6 @@ angular.module('_SLOG')
   .controller('SlogShowController', ['$scope', '$log', '$routeParams', 'Slog', 'User', 
     function SlogShowController($scope, $log, $routeParams, Slog, User){
       
-      $scope.slog = null;
-      $scope.user = null;
       Slog.get({id: $routeParams.id})
         .$promise.then(function(data) {
           // $log.info(data);
@@ -18,9 +16,7 @@ angular.module('_SLOG')
         }, function(error){
           $log.error('there was an error getting the slog ' +
                       error);
+          $scope.error = "error";
       });
-      
-      
-      
     }
   ]);
