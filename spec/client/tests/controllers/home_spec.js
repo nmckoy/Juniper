@@ -1,14 +1,19 @@
 describe('HomeController', function() {
-  var controller, scope;
-  beforeEach(module('Rangular'));
+  
+  var HomeController, scope;
+  
+  beforeEach(module(ApplicationConfiguration.applicationModuleName));
+  
   beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
-    controller = $controller('HomeController', {
+    
+    HomeController = $controller('HomeController', {
       $scope: scope
     });
+    
   }));
   
-  it('contains string lol in scope', function() {
-    expect()
+  it('should have string lol in scope variable lol', function() {
+    expect(scope.lol).to.equal('lol');
   });
 });

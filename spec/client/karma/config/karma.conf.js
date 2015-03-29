@@ -18,7 +18,7 @@ var
 module.exports = function(karmaConfig) {
 	karmaConfig.set({
 		// Frameworks to use
-		frameworks: ['mocha'],
+		frameworks: ['mocha', 'chai'],
 
 		// List of files / patterns to load in the browser
 		files: _.union(appAssets, js_tests),
@@ -36,6 +36,7 @@ module.exports = function(karmaConfig) {
 
 		plugins: [
 			'karma-mocha',
+			'karma-chai',
 			'karma-mocha-reporter',
 			'karma-phantomjs-launcher'
 		],
