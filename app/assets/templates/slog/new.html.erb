@@ -7,12 +7,12 @@
     <div class="alert alert-danger" ng-hide="!error">
       <span ng-bind="error" />
     </div>
-    <form class="edit_user" ng-submit="saveOrUpdate()">
+    <form class="edit_user" ng-submit="save()">
       
       <div class="field">
         <label for="name">Description: </label>
         <input id="name" class="form-control" 
-              type="text" ng-model="desc" required/>
+              type="text" ng-model="description" required/>
       </div>
       <div class="field">
         <label for="email">Departure: </label>

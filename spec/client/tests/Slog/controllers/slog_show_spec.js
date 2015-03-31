@@ -8,11 +8,15 @@ describe('SlogShowController', function() {
       $httpBackend,
       sampleSlog,
       sampleUser,
-      $controller;
+      $controller,
+      mockUserURL,
+      mockSlogURL;
   
   beforeEach(module(ApplicationConfiguration.applicationModuleName));
   
-  beforeEach(inject(function(_$controller_, $rootScope, _$httpBackend_, _$routeParams_, _Slog_, _User_){
+  beforeEach(inject(function(_$controller_, $rootScope, 
+                              _$httpBackend_, _$routeParams_,
+                              _Slog_, _User_){
     
     scope = $rootScope.$new();
     
@@ -21,6 +25,12 @@ describe('SlogShowController', function() {
     $controller  = _$controller_;
     Slog         = _Slog_;
     User         = _User_;
+    
+    SlogShowController = function(){
+      return $controller('SlogShowController', {
+        $scope: scope
+      });
+    };
     
     sampleUser = new User({
       id: '1',
@@ -34,39 +44,34 @@ describe('SlogShowController', function() {
       user_id: sampleUser.id,
       description: 'init',
       slog_type: 'init',
-      departure_date: 'init'
+      departure_date: '1/1/2015'
     });
 
     $routeParams.id = sampleSlog.id;
     
+    mockUserURL = 'https://juniper-nmckoy.c9.io/users/' + sampleUser.id + '.json';
+    mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs/' + sampleSlog.id + '.json';
+    
   }));
   
   it('should get one slog', function(done) {
-    var mockUserURL = 'https://juniper-nmckoy.c9.io/users/' + sampleUser.id + '.json';
     $httpBackend.when('GET', mockUserURL).respond(sampleUser);
-        
-    var mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs/' + sampleSlog.id + '.json';
     $httpBackend.when('GET', mockSlogURL).respond(sampleSlog);    
     
-    SlogShowController = $controller('SlogShowController', {
-      $scope: scope
-    });
+    SlogShowController();
     
     $httpBackend.flush();
-
+    
     expect(scope.slog).to.include(sampleSlog);
     
     done();
     
   });
   
-  it('should set errors', function(done) {
-    var mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs/' + sampleSlog.id + '.json';
-    $httpBackend.when('GET', mockSlogURL).respond(500);
+  it('should set errors when GET fails', function(done) {
+    $httpBackend.when('GET', mockSlogURL).respond(404);
     
-    SlogShowController = $controller('SlogShowController', {
-      $scope: scope
-    });
+    SlogShowController();
     
     $httpBackend.flush();
     
