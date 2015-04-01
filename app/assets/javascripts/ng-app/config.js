@@ -15,10 +15,20 @@ var ApplicationConfiguration = (function() {
 		// Add the module to the AngularJS configuration file
 		angular.module(applicationModuleName).requires.push(moduleName);
 	};
+	
+	// rails sends this error when session has timed-out
+	var isSessionEnd = function(status) {
+		if (status === 401) { // unauthorized
+			return true;
+		} else {
+			return false;
+		}
+	};
 
 	return {
 		applicationModuleName: applicationModuleName,
 		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
-		registerModule: registerModule
+		registerModule: registerModule,
+		isSessionEnd: isSessionEnd
 	};
 })();
