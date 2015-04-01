@@ -1,5 +1,5 @@
 # getting slogs for one user
-if (params[:user_slogs])
+if (params[:user_id])
   user = User.find(params[:user_id])
   json.slogs user.slogs do |slog|
     json.extract! slog, :id, :user_id, :poster, :description, :departure_date, 

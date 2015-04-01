@@ -1,6 +1,4 @@
 // optional parameters to pass are
-// * must pass both of these to get user slogs *
-// user_slogs: true
 // user_id: 'any user id'
 // with_user: true
 angular.module('_SLOG')
