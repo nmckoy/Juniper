@@ -1,5 +1,6 @@
 if (params[:currentuser])
     json.extract! current_user, :id, :name, :email, :sign_in_count, :provider
+    json.currentuser true
     json.url user_url(current_user, format: :json)
 else
   json.users @users do |user|

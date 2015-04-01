@@ -21,7 +21,7 @@ angular.module('_USER')
         }
       });
       $scope.$watch('edit_email_flag', function() {
-        $log.info($scope.edit_email_flag);
+        //$log.info($scope.edit_email_flag);
         if ($scope.edit_email_flag === false){
           update('email');
         }
