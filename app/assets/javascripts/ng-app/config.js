@@ -18,11 +18,7 @@ var ApplicationConfiguration = (function() {
 	
 	// rails sends this error when session has timed-out
 	var isSessionEnd = function(status) {
-		if (status === 401) { // unauthorized
-			return true;
-		} else {
-			return false;
-		}
+		return status === 401 ? true : false;
 	};
 
 	return {
