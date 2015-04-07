@@ -77,5 +77,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # for font-awesome to work on deployment
-  config.action_controller.relative_url_root  = "/juniper"
+  # config.action_controller.relative_url_root  = "/"
 end
