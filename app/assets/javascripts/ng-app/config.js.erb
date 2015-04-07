@@ -22,11 +22,11 @@ var ApplicationConfiguration = (function() {
 	};
 	
 	<% if Rails.env.production? %>
-    var apiUrl = 'https://slog-st.herokuapp.com';
-  <% else %>
-    var apiUrl = 'https://juniper-nmckoy.c9.io';
-  <% end %>
-
+		var apiUrl = 'https://juniper-nmckoy.c9.io';
+	<% else %>
+		var apiUrl = 'https://slog-st.herokuapp.com';
+	<% end %>
+	
 	return {
 		applicationModuleName: applicationModuleName,
 		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
