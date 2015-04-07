@@ -21,8 +21,7 @@ var ApplicationConfiguration = (function() {
 		return status === 401 ? true : false;
 	};
 	
-	// api urls
-  <% if Rails.env.production? %>
+	<% if Rails.env.production? %>
     var apiUrl = 'https://slog-st.herokuapp.com';
   <% else %>
     var apiUrl = 'https://juniper-nmckoy.c9.io';

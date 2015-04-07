@@ -22,6 +22,7 @@ namespace :karma  do
       # edit 3/27/2015: this did not work btw
       # i changed the angular-rails-template.js.erb to just not erb anymore. it is a plain
       # old angular module registry now
+      # location /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/angular-rails-templates-0.1.3/vendor/assets/javascripts
       
       # karma had issues reading some of my gem angular stuff e.g. angular-rails-tmeplates
       # that particular gem does .erb in its .js file and karma can distinguish that when

@@ -11,6 +11,8 @@ describe('SlogEditController', function(){
         
   beforeEach(module(ApplicationConfiguration.applicationModuleName));
 
-  
+  // beforeEach((inject(function(){
+    
+  // })));
   
 });

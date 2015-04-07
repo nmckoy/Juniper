@@ -26,9 +26,9 @@ module.exports = function(karmaConfig) {
 		// list of files to exclude
     exclude: [
       '../app/assets/templates/*.erb',
-      '../app/assets/templates/**/*.erb',
+      '../app/assets/templates/**/*.erb'
     ],
-
+    
 		// Test results reporter to use
 		// Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
 		//reporters: ['progress'],
