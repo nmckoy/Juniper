@@ -3,7 +3,7 @@
 // with_user: true
 angular.module('_SLOG')
   .factory('Slog', ['$resource', function Slog($resource) {
-    return $resource(ApplicationConfiguration.apiUrl + 'slogs/:id.json', {
+    return $resource(ApplicationConfiguration.apiUrl + '/slogs/:id.json', {
       id: '@id'
     }, {
       update: {
