@@ -22,7 +22,7 @@ gem 'angular-rails-templates'
 # gem 'bootflat-rails', '~> 0.1.9'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
+gem 'mail', '~> 2.6.3'
 gem 'factory_girl_rails', '~> 4.2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

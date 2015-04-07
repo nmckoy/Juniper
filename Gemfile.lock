@@ -88,13 +88,13 @@ GEM
     json (1.8.1)
     jwt (1.2.0)
     libv8 (3.16.14.7)
-    mail (2.6.1)
+    mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mailboxer (0.12.5)
       carrierwave (>= 0.5.8)
       foreigner (>= 0.9.1)
       rails (>= 3.2.0)
-    mime-types (2.3)
+    mime-types (2.4.3)
     minitest (5.4.2)
     multi_json (1.10.1)
     multi_xml (0.5.5)
@@ -229,6 +229,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mail (~> 2.6.3)
   mailboxer
   omniauth
   omniauth-facebook
