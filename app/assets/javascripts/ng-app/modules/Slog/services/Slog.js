@@ -3,7 +3,7 @@
 // with_user: true
 angular.module('_SLOG')
   .factory('Slog', ['$resource', function Slog($resource) {
-    return $resource('https://juniper-nmckoy.c9.io/slogs/:id.json', {
+    return $resource(ApplicationConfiguration.apiUrl + 'slogs/:id.json', {
       id: '@id'
     }, {
       update: {

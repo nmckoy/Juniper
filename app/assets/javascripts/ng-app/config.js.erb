@@ -20,11 +20,19 @@ var ApplicationConfiguration = (function() {
 	var isSessionEnd = function(status) {
 		return status === 401 ? true : false;
 	};
+	
+	// api urls
+  <% if Rails.env.production? %>
+    var apiUrl = 'https://slog-st.herokuapp.com';
+  <% else %>
+    var apiUrl = 'https://juniper-nmckoy.c9.io';
+  <% end %>
 
 	return {
 		applicationModuleName: applicationModuleName,
 		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
 		registerModule: registerModule,
-		isSessionEnd: isSessionEnd
+		isSessionEnd: isSessionEnd,
+		apiUrl: apiUrl
 	};
 })();

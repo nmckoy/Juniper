@@ -2,7 +2,7 @@
 // currentuser: true - to get current logged in user
 angular.module('_USER')
   .factory('User', ['$resource', function User($resource) {
-    return $resource('https://juniper-nmckoy.c9.io/users/:id.json', {
+    return $resource(ApplicationConfiguration.apiUrl + '/users/:id.json', {
       id: "@id"
     }, {
       update: {
