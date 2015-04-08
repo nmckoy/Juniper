@@ -7,11 +7,12 @@
             Posted <span ng-bind="slog.created_at | date:'medium'"/>
           </small>
         </h3>
-        <p ng-click="edit_desc()" ng-show="!edit_desc_flag"
-                  ng-bind="slog.description"></p>
-        <div ng-show="edit_desc_flag">
+        <p ng-click="editDesc(slog.user.currentuser)" 
+           ng-show="!editDescFlag" ng-bind="slog.description"></p>
+        <div ng-show="editDescFlag">
           <form>
-            <textarea rows="5" cols="60" ng-model="slog.description"></textarea>
+            <textarea rows="5" cols="60" ng-model="slog.description"
+                      focus="editDescFlag"></textarea>
           </form>
         </div>
       </div>
