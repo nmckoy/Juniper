@@ -24,9 +24,9 @@ var ApplicationConfiguration = (function() {
 	// karma will complain about erb tags
 	// remove and hardcode dev url
 	<% if Rails.env.production? %>
-		var apiUrl = 'https://juniper-nmckoy.c9.io/api';
-	<% else %>
 		var apiUrl = 'https://slog-st.herokuapp.com/api';
+	<% else %>
+		var apiUrl = 'https://juniper-nmckoy.c9.io/api';
 	<% end %>
 	// hardcoded dev url
 	// var apiUrl = 'https://slog-st.herokuapp.com/api';
