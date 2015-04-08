@@ -57,8 +57,8 @@ describe('SlogNewController', function() {
       departure_date: '1/1/2015'
     });
 
-    mockCurrentUserURL = 'https://juniper-nmckoy.c9.io/users.json?currentuser=true';
-    mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs.json';
+    mockCurrentUserURL = 'https://juniper-nmckoy.c9.io/api/users.json?currentuser=true';
+    mockSlogURL = 'https://juniper-nmckoy.c9.io/api/slogs.json';
     
   })); // end setup
   

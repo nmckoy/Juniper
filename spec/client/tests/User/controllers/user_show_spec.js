@@ -59,8 +59,8 @@ describe('UserShowController', function(){
     
     $routeParams.id = sampleUser.id;
     
-    mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs.json?user_id='+$routeParams.id;
-    mockUserURL = 'https://juniper-nmckoy.c9.io/users/'+$routeParams.id+'.json';
+    mockSlogURL = 'https://juniper-nmckoy.c9.io/api/slogs.json?user_id='+$routeParams.id;
+    mockUserURL = 'https://juniper-nmckoy.c9.io/api/users/'+$routeParams.id+'.json';
   }));
   
   it('should start with an empty list of slogs',

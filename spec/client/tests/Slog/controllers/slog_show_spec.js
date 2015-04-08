@@ -49,8 +49,8 @@ describe('SlogShowController', function() {
 
     $routeParams.id = sampleSlog.id;
     
-    mockUserURL = 'https://juniper-nmckoy.c9.io/users/' + sampleUser.id + '.json';
-    mockSlogURL = 'https://juniper-nmckoy.c9.io/slogs/' + $routeParams.id + '.json?with_user=true';
+    mockUserURL = 'https://juniper-nmckoy.c9.io/api/users/' + sampleUser.id + '.json';
+    mockSlogURL = 'https://juniper-nmckoy.c9.io/api/slogs/' + $routeParams.id + '.json?with_user=true';
     
   }));
   

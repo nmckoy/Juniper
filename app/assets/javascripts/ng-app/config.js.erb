@@ -21,11 +21,15 @@ var ApplicationConfiguration = (function() {
 		return status === 401 ? true : false;
 	};
 	
+	// karma will complain about erb tags
+	// remove and hardcode dev url
 	<% if Rails.env.production? %>
-    var apiUrl = 'https://slog-st.herokuapp.com';
+    var apiUrl = 'https://slog-st.herokuapp.com/api';
   <% else %>
-    var apiUrl = 'https://juniper-nmckoy.c9.io';
+    var apiUrl = 'https://juniper-nmckoy.c9.io/api';
   <% end %>
+  // dev url
+	//var apiUrl = 'https://juniper-nmckoy.c9.io/api';
 
 	return {
 		applicationModuleName: applicationModuleName,
