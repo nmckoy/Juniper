@@ -1,4 +1,4 @@
-# getting slogs for one user
+# getting all slogs for one user
 if (params[:user_id])
   user = User.find(params[:user_id])
   json.slogs user.slogs do |slog|
