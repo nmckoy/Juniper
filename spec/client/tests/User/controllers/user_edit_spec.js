@@ -40,7 +40,7 @@ describe('UserEditController', function(){
     
     $routeParams.id = sampleUser.id;
     
-    mockUserURL = 'https://juniper-nmckoy.c9.io/users/'+$routeParams.id+'.json';
+    mockUserURL = 'https://juniper-nmckoy.c9.io/api/users/'+$routeParams.id+'.json';
   }));
   
   it('edit flags should not exist on init',

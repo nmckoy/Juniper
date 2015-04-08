@@ -25,9 +25,11 @@ Rails.application.routes.draw do
   
   #get 'slogs' => 'angular#index'
   #get 'slogs/:id' => 'angular#index'
-  resources :slogs
+  scope '/api' do
+    resources :slogs
   
-  resources :users
+    resources :users
+  end
   
   #mailboxer
   get 'conversations/sent', to: 'conversations#sentbox', as: 'sentbo'

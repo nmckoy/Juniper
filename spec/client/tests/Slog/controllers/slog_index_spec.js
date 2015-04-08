@@ -15,7 +15,7 @@ describe('SlogIndexController', function(){
   beforeEach(inject(function(_$controller_, $rootScope, 
                               _$httpBackend_, _Slog_, _User_){
                                 
-    mockSlogsURL = 'https://juniper-nmckoy.c9.io/slogs.json?with_user=true';
+    mockSlogsURL = 'https://juniper-nmckoy.c9.io/api/slogs.json?with_user=true';
     scope = $rootScope.$new();
     
     $httpBackend = _$httpBackend_;
