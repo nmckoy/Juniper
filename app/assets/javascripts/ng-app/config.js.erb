@@ -5,7 +5,7 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'Rangular';
 
-	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates', 'uiGmapgoogle-maps'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -29,13 +29,18 @@ var ApplicationConfiguration = (function() {
 		var apiUrl = 'https://juniper-nmckoy.c9.io/api';
 	<% end %>
 	// hardcoded dev url
-	// var apiUrl = 'https://slog-st.herokuapp.com/api';
+	// var apiUrl = 'https://juniper-nmckoy.c9.io/api';
+	
+	var mapOptions = {
+		scrollwheel: false
+	};
 	
 	return {
 		applicationModuleName: applicationModuleName,
 		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
 		registerModule: registerModule,
 		isSessionEnd: isSessionEnd,
-		apiUrl: apiUrl
+		apiUrl: apiUrl,
+		mapOptions: mapOptions
 	};
 })();
