@@ -55,4 +55,12 @@ angular.module(ApplicationConfiguration.applicationModuleName)
 	  var authToken;
     authToken = $("meta[name='csrf-token']").attr('content');
     $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = authToken;
-	}]);
+	}])
+	
+	.config(function(uiGmapGoogleMapApiProvider){
+	  uiGmapGoogleMapApiProvider.configure({
+	    //key: 'api key',
+	    v: '3.17',
+	    libraries: 'weather,geometry,visualization'
+	  });
+	});

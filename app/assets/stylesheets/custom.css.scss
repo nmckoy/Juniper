@@ -115,6 +115,11 @@
 }
 /**************** End NAVBAAR *********************/
 
+/* gmap stuff */
+.angular-google-map-container { 
+  height: 300px; 
+}
+
 /****************** AUTH PAGES *******************/
 @media(min-width:768px) {
   .social-logins {
