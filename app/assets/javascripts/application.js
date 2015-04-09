@@ -22,6 +22,8 @@
 //= require angular-route
 //= require angular-resource
 //= require angular-rails-templates
+//= require angular-google-maps
+//= require lodash
 //= require_tree ../templates
 
 // have to tell rails to load sub-modules bae
