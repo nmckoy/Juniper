@@ -22,7 +22,6 @@ class MessagesController < ApplicationController
     # end
     
     current_user.send_message(@recipient, params[:body], params[:subject])
-    flash[:notice] = "Message has been sent!"
     
     redirect_to conversations_path(:id => current_user.id)
   end

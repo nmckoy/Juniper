@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'messages/new'
-
-  get 'messages/create'
 
   get 'callbacks/all'
-  # match 'registrations' => 'registrations#moreinfo', via: :get
-
   devise_for :users,
              controllers: {
                             :registrations => 'registrations' ,
@@ -18,38 +13,30 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/registrations/moreinfo' => 'registrations#moreinfo'
   end
-
- # get 'conversations/new', to: 'conversations#new'
-#  get '/conversations/:id', to: 'conversations#index', as: 'conversations'
-
   
-  #get 'slogs' => 'angular#index'
-  #get 'slogs/:id' => 'angular#index'
   scope '/api' do
     resources :slogs
   
     resources :users
-  end
-  
-  #mailboxer
-  get 'conversations/sent', to: 'conversations#sentbox', as: 'sentbo'
-  resources :conversations do
-    member do
-      
-      post :reply
-      post :trash
-      post :recover
+    
+    resources :conversations do
+      member do
+        post :create
+        post :reply
+        post :trash
+        post :recover
+      end
+      collection do
+        get :trashbin
+        post :empty_trash
+      end
     end
-    collection do
-      get :trashbin
-      post :empty_trash
-    end
+    # resources :messages do
+    #   member do
+    #     post :create
+    #   end  
+    # end  
   end
-  resources :messages do
-    member do
-      post :create
-    end  
-  end  
 
   # routes for angular
   root 'angular#index'
