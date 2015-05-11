@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var
-  _ = require('lodash'),
+  ಠ_ಠ = require('lodash'),
 	appAssets = [
 		JS_APPLICATION_SPEC,
 	  '../app/assets/javascripts/ng-app/*js',
@@ -21,7 +21,7 @@ module.exports = function(karmaConfig) {
 		frameworks: ['mocha', 'chai'],
 
 		// List of files / patterns to load in the browser
-		files: _.union(appAssets, js_tests),
+		files: ಠ_ಠ.union(appAssets, js_tests),
 		
 		// list of files to exclude
     exclude: [

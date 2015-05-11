@@ -7,10 +7,10 @@ angular.module('_HOME')
       
       $scope.map = {
         center: {
-          latitude: 45,
-          longitude: -73
+          latitude: 38.8930851,
+          longitude: -77.0363992
         },
-        zoom: 8
+        zoom: 12
       };
       
       uiGmapGoogleMapApi.then(function(maps){
