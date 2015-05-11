@@ -14,7 +14,7 @@
 /.c9/
 
 # ignoring logs and nodemodules
-/log/
+/log/development.log
 /node_modules/
 
 >>>>>>> 8e2e09eca807d07a557707c7623040a1293c0797

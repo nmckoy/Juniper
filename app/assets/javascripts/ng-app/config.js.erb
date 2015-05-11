@@ -5,7 +5,7 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'Rangular';
 
-	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates', 'uiGmapgoogle-maps'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -18,7 +18,7 @@ var ApplicationConfiguration = (function() {
 	
 	// rails sends this error when session has timed-out
 	var isSessionEnd = function(status) {
-		return status === 401 ? true : false;
+		return status === 401;
 	};
 	
 	// karma will complain about erb tags
