@@ -35,7 +35,16 @@ describe('UserEditController', function(){
       id: '1',
       name: 'init',
       email: 'init@init.com',
-      provider: 'init'
+      provider: 'init',
+      currentuser: true
+    });
+    
+    notLoggedInUser = new User({
+      id: '2',
+      name: 'init2',
+      email: 'init2@init2.com',
+      provider: 'init2'
+      // currentuser key will not exist
     });
     
     $routeParams.id = sampleUser.id;
@@ -55,25 +64,49 @@ describe('UserEditController', function(){
     }
   );
   
-  it('edit_name() should set edit name flag to true',
+  it('edit_name() should set edit name flag to true only if currentuser',
     function(done) {
       // controller init
       UserEditController();
       
-      scope.edit_name();
+      scope.edit_name(sampleUser.currentuser);
       expect(scope.edit_name_flag).to.be.true;
       
       done();
     }
   );
   
-  it('edit_email() should set edit email flag to true',
+  it('edit_email() should set edit email flag to true only if currentuser',
     function(done) {
       // controller init
       UserEditController();
       
-      scope.edit_email();
+      scope.edit_email(sampleUser.currentuser);
       expect(scope.edit_email_flag).to.be.true;
+      
+      done();
+    }
+  );
+  
+  it('edit_email() should not change flag if not currentuser',
+    function(done) {
+      // controller init
+      UserEditController();
+      
+      scope.edit_email(notLoggedInUser.currentuser);
+      expect(scope.edit_email_flag).to.be.null;
+      
+      done();
+    }
+  );
+  
+  it('edit_name() should not change flag if not currentuser',
+    function(done) {
+      // controller init
+      UserEditController();
+      
+      scope.edit_email(notLoggedInUser.currentuser);
+      expect(scope.edit_email_flag).to.be.null;
       
       done();
     }

@@ -10,7 +10,7 @@
     <aside class="col-md-4" ng-controller="UserEditController">
       <section class="user_info">
         <img class="gravatar" src="{{user.gravatar}}" alt="{{user.name}}">
-        <h1 ng-show="!edit_name_flag" ng-click="edit_name()" 
+        <h1 ng-show="!edit_name_flag" ng-click="edit_name(user.currentuser)" 
             ng-bind="user.name" class="pull-left"></h1><br>
         <div ng-show="edit_name_flag">
           <form>
@@ -20,7 +20,7 @@
         </div>
       </section>
       <small ng-show="!edit_email_flag" ng-bind="user.email" 
-              class="pull-left text-muted" ng-click="edit_email()"></small><br>
+              class="pull-left text-muted" ng-click="edit_email(user.currentuser)"></small><br>
       <div ng-show="edit_email_flag">
         <form>
           <input type="text"

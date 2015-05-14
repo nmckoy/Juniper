@@ -7,11 +7,15 @@ angular.module('_USER')
       $scope.edit_name_flag = null;
       $scope.edit_email_flag = null;
       // opening input text for editing
-      $scope.edit_name = function() {
-        $scope.edit_name_flag = true;
+      $scope.edit_name = function(currentuser) {
+        if (currentuser) {
+          $scope.edit_name_flag = true;
+        }
       };
-      $scope.edit_email = function(){
-        $scope.edit_email_flag = true;
+      $scope.edit_email = function(currentuser){
+        if (currentuser) {
+          $scope.edit_email_flag = true;
+        }
       };
       
       // watching my flags change

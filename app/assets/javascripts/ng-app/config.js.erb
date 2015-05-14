@@ -5,7 +5,7 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'Rangular';
 
-	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngRoute', 'templates', 'uiGmapgoogle-maps'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -23,13 +23,13 @@ var ApplicationConfiguration = (function() {
 	
 	// karma will complain about erb tags
 	// remove and hardcode dev url
-	<% if Rails.env.production? %>
-		var apiUrl = 'https://slog-st.herokuapp.com/api';
-	<% else %>
-		var apiUrl = 'https://juniper-nmckoy.c9.io/api';
-	<% end %>
+	// <% if Rails.env.production? %>
+	// 	var apiUrl = 'https://slog-st.herokuapp.com/api';
+	// <% else %>
+	// 	var apiUrl = 'https://juniper-nmckoy.c9.io/api';
+	// <% end %>
 	// hardcoded dev url
-	// var apiUrl = 'https://juniper-nmckoy.c9.io/api';
+	var apiUrl = 'https://juniper-nmckoy.c9.io/api';
 	
 	var mapOptions = {
 		scrollwheel: false
