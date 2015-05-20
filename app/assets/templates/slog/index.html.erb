@@ -4,7 +4,7 @@
     <h3>All Slogs
       <small><span ng-bind="filteredslogs.length"/> results</small>
     </h3>
-    <input type="search" ng-model="searchText"></input>
+    <input type="search" ng-model="searchText" placeholder="Search" />
     <div class="container col-md-8" ng-click="show()">
       <ul class="list-group" ng-repeat="slog in filteredslogs = (slogs | filter:searchText) ">
         <li class="list-group-item">
